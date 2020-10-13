@@ -50,4 +50,6 @@ position = Vector2( 4, -72 )
 
 [editable path="Area2D"]
 
+[editable path="Area2D2"]
+
 [editable path="player"]

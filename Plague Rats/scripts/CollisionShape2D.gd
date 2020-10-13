@@ -22,7 +22,7 @@ func _on_Button_pressed():
 	var vert = abs(playerObject.global_position.y - pos2D.global_position.y)
 	
 	   #if on the same vert/hori level and not diagonal
-	if (horiz <= 50 || vert <= 50) && (horiz == 0 || vert == 0):
+	if (horiz <= 50 && vert <= 50) && (horiz == 0 || vert == 0):
 		playerObject.global_position = pos2D.global_position
 
    #function executes whenever an area2D LEAVES the collider  
