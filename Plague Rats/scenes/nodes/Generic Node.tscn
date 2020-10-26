@@ -5,7 +5,7 @@
 
 [sub_resource type="RectangleShape2D" id=1]
 
-[node name="Area2D" type="Area2D" groups=[
+[node name="Generic Node" type="Area2D" groups=[
 "node",
 ]]
 
