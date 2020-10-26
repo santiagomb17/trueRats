@@ -1,7 +1,7 @@
 extends Position2D
 
 
-var endLvlLoader = load("res://scenes/nodes/special nodes/Level End Node.tscn")
+var endLvlLoader = load("res://scenes/nodes/Level End Node.tscn")
 var endLevelNode
 
    #spawns node
