@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Plague Rats"
-run/main_scene="res://scenes/levels/well_level.tscn"
+run/main_scene="res://scenes/text_doc.tscn"
 config/icon="res://icon.png"
 
 [display]
