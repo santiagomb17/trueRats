@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://scenes/nodes/Generic Node.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/nodes/Move Node.tscn" type="PackedScene" id=4]
 [ext_resource path="res://art assets/nodes/cast_node_texture.png" type="Texture" id=6]
+
 
 [node name="Goal Node" groups=[
 "goal node",

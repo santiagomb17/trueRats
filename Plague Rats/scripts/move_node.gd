@@ -21,16 +21,17 @@ func _on_Button_pressed():
 	var horiz = abs(playerObject.global_position.x - pos2D.global_position.x)
 	var vert = abs(playerObject.global_position.y - pos2D.global_position.y)
 	
-	   #if on the same vert/hori level and not diagonal
-	if (horiz <= 50 && vert <= 50) && (horiz == 0 || vert == 0):
+	   #if on the same vert/hori level and not diagonal 9/21/2020
+	   #changing so you just have to be on the same x/y-axis 10/27/2020
+	#if (horiz <= 50 && vert <= 50) && (horiz == 0 || vert == 0):
+	if horiz == 0 || vert == 0:
 		playerObject.global_position = pos2D.global_position
 
    #function executes whenever an area2D LEAVES the collider  
 func _on_Area2D_area_exited(area):
 	   pass
 
-   #function executes whenever an area2D ENTERS the collider  
-func _on_Area2D_area_entered(area):
+func _on_Move_Node_area_entered(area):
 	   #if end node success state
 	if currNode.is_in_group("end level"):
 		print("CONGLATURATIONS YOU  ARE WINNAR1")
@@ -41,6 +42,7 @@ func _on_Area2D_area_entered(area):
 			print("ENTERD LVL")
 			get_node("../../Level Start Node").queue_free()
 			emit_signal("spawnEndLvl")
-			
 
 
+func _on_Move_Node_area_exited(area):
+	pass # Replace with function body.
