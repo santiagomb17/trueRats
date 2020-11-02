@@ -30,8 +30,5 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Button"]
 position = Vector2( 10, 10 )
 texture = ExtResource( 1 )
-[connection signal="area_entered" from="." to="CollisionShape2D" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="." to="CollisionShape2D" method="_on_Move_Node_area_entered"]
-[connection signal="area_exited" from="." to="CollisionShape2D" method="_on_Area2D_area_exited"]
-[connection signal="area_exited" from="." to="CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="pressed" from="Button" to="CollisionShape2D" method="_on_Button_pressed"]

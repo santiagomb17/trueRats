@@ -27,11 +27,11 @@ func _on_Button_pressed():
 	if horiz == 0 || vert == 0:
 		playerObject.global_position = pos2D.global_position
 
-   #function executes whenever an area2D LEAVES the collider  
-func _on_Area2D_area_exited(area):
-	   pass
+#   #function executes whenever an area2D LEAVES the collider  
+#func _on_Area2D_area_exited(area):
+#	   pass
 
-func _on_Move_Node_area_entered(area):
+func _on_Move_Node_area_entered(_area):
 	   #if end node success state
 	if currNode.is_in_group("end level"):
 		print("CONGLATURATIONS YOU  ARE WINNAR1")
@@ -43,6 +43,6 @@ func _on_Move_Node_area_entered(area):
 			get_node("../../Level Start Node").queue_free()
 			emit_signal("spawnEndLvl")
 
-
-func _on_Move_Node_area_exited(area):
-	pass # Replace with function body.
+#
+#func _on_Move_Node_area_exited(area):
+#	pass # Replace with function body.
