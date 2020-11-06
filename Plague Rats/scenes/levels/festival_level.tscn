@@ -15,14 +15,14 @@ position = Vector2( 480, 370 )
 
 [node name="CollisionShape2D" parent="Interact Node" index="0"]
 interDist = 55.5
-hidPath = [ NodePath("../../Move Node"), NodePath("../../Move Node3") ]
+hidPath = [ NodePath("../../right hid"), NodePath("../../right hid 2") ]
 
 [node name="Interact Node2" parent="." instance=ExtResource( 7 )]
-position = Vector2( 260, 320 )
+position = Vector2( 230, 320 )
 
 [node name="CollisionShape2D" parent="Interact Node2" index="0"]
 interDist = 55.5
-hidPath = [ NodePath("../../Move Node6") ]
+hidPath = [ NodePath("../../top hid"), NodePath("../../top hid2") ]
 
 [node name="endSpawn" parent="." instance=ExtResource( 5 )]
 position = Vector2( 200, 400 )
@@ -44,20 +44,20 @@ position = Vector2( 200, 400 )
 [node name="Goal Node" parent="." instance=ExtResource( 4 )]
 position = Vector2( 710, 140 )
 
-[node name="Move Node" parent="." instance=ExtResource( 6 )]
-position = Vector2( 740, 400 )
+[node name="right hid" parent="." instance=ExtResource( 6 )]
+position = Vector2( 650, 400 )
 
-[node name="Move Node3" parent="." instance=ExtResource( 6 )]
+[node name="right hid 2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 710, 250 )
 
-[node name="Move Node4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 740, 320 )
+[node name="top hid2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 650, 320 )
 
 [node name="Move Node5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 290, 320 )
+position = Vector2( 200, 320 )
 
-[node name="Move Node6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 290, 250 )
+[node name="top hid" parent="." instance=ExtResource( 6 )]
+position = Vector2( 480, 250 )
 
 [node name="Move Node2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 480, 400 )
@@ -65,11 +65,11 @@ position = Vector2( 480, 400 )
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 210, 418 )
 [connection signal="area_entered" from="Interact Node" to="Interact Node/CollisionShape2D" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Interact Node" to="Interact Node/CollisionShape2D" method="_on_Area2D_area_exited"]
 [connection signal="area_exited" from="Interact Node" to="Interact Node/CollisionShape2D" method="_on_Move_Node_area_exited"]
+[connection signal="area_exited" from="Interact Node" to="Interact Node/CollisionShape2D" method="_on_Area2D_area_exited"]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
+[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
 [connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 
 [editable path="Interact Node"]
