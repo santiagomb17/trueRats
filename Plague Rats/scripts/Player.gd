@@ -1,6 +1,4 @@
 extends Area2D
 
+var isHidden = false
 
-
-func ready():
-	pass
