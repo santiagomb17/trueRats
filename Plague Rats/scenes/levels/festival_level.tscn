@@ -41,9 +41,6 @@ texture = ExtResource( 1 )
 [node name="Level Start Node" parent="." instance=ExtResource( 3 )]
 position = Vector2( 200, 400 )
 
-[node name="Goal Node" parent="." instance=ExtResource( 4 )]
-position = Vector2( 710, 140 )
-
 [node name="right hid" parent="." instance=ExtResource( 6 )]
 position = Vector2( 650, 400 )
 
@@ -64,12 +61,17 @@ position = Vector2( 480, 400 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 210, 418 )
+
+[node name="Goal Node" parent="." instance=ExtResource( 4 )]
+position = Vector2( 710, 160 )
+[connection signal="area_entered" from="Interact Node" to="Interact Node/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_entered" from="Interact Node" to="Interact Node/CollisionShape2D" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Interact Node" to="Interact Node/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="area_exited" from="Interact Node" to="Interact Node/CollisionShape2D" method="_on_Area2D_area_exited"]
+[connection signal="area_exited" from="Interact Node" to="Interact Node/CollisionShape2D" method="_on_Move_Node_area_exited"]
+[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
+[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 
 [editable path="Interact Node"]
