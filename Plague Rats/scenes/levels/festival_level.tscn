@@ -36,7 +36,7 @@ position = Vector2( 630, 320 )
 position = Vector2( 200, 320 )
 
 [node name="top hid" parent="." instance=ExtResource( 6 )]
-position = Vector2( 200, 170 )
+position = Vector2( 630, 160 )
 
 [node name="Move Node2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 480, 160 )
@@ -47,12 +47,17 @@ position = Vector2( 210, 418 )
 [node name="Goal Node" parent="." instance=ExtResource( 4 )]
 position = Vector2( 710, 160 )
 
+[node name="CollisionShape2D" parent="Goal Node" index="0"]
+isGoal = true
+
 [node name="hide_node" parent="." instance=ExtResource( 1 )]
 position = Vector2( 270, 400 )
 
 [node name="dynamicThreat" parent="." instance=ExtResource( 8 )]
 wait_time = 30.0
 autostart = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
