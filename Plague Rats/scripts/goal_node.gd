@@ -1,5 +1,7 @@
 extends CollisionShape2D
 
+export(bool) var isGoal
+export(bool) var isCheese
 
 onready var pos2D = get_node("../Position2D")         #getting position for the player to spawn at when clicked
 onready var playerObject = get_node("../../player")   #getting the player object
@@ -21,6 +23,9 @@ func _on_Button_pressed():
    #this method handles spawning the end level
    #LAST UPDATED 11/8/2020
 func _on_Goal_Node_area_entered(_area):
-	if get_node("../../Level Start Node"):
-		get_node("../../Level Start Node").queue_free()
-		emit_signal("spawnEndLvl")
+	if isGoal:
+		if get_node("../../Level Start Node"):
+			get_node("../../Level Start Node").queue_free()
+			emit_signal("spawnEndLvl")
+	elif isCheese:
+		print("Got Cheese!")   #replace this with the code that manages cheese
