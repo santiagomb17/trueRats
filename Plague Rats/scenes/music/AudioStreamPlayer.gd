@@ -1,4 +1,4 @@
-extends Node2D
+extends AudioStreamPlayer
 
 
 # Declare member variables here. Examples:
@@ -8,9 +8,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#$AudioStreamPlayer.volume_db -=30
 	pass # Replace with function body.
 
-func _process(_delta):
-	if $AudioStreamPlayer.playing == false:
-		$AudioStreamPlayer.play()
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
