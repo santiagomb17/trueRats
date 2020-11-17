@@ -16,11 +16,24 @@
 position = Vector2( 230, 320 )
 
 [node name="CollisionShape2D" parent="Interact Node2" index="0"]
-interDist = 55.5
+interDist = 55.0
 hidPath = [ NodePath("../../top hid"), NodePath("../../top hid2") ]
 
+[node name="Sprite" parent="Interact Node2/Button" index="0"]
+scale = Vector2( 1, 1 )
+
+[node name="Interact Node3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 710, 130 )
+
+[node name="CollisionShape2D" parent="Interact Node3" index="0"]
+interDist = 55.0
+hidPath = [ NodePath("../../Move Node3") ]
+
+[node name="Sprite" parent="Interact Node3/Button" index="0"]
+scale = Vector2( 1, 1 )
+
 [node name="endSpawn" parent="." instance=ExtResource( 5 )]
-position = Vector2( 480, 200 )
+position = Vector2( 230, 110 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 490, 260 )
@@ -30,17 +43,26 @@ zoom = Vector2( 0.6, 0.6 )
 [node name="Level Start Node" parent="." instance=ExtResource( 3 )]
 position = Vector2( 200, 400 )
 
+[node name="Sprite" parent="Level Start Node/Button" index="0"]
+scale = Vector2( 1, 1 )
+
 [node name="top hid2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 630, 320 )
 
 [node name="Move Node5" parent="." instance=ExtResource( 6 )]
 position = Vector2( 200, 320 )
 
+[node name="Move Node6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 630, 400 )
+
 [node name="top hid" parent="." instance=ExtResource( 6 )]
 position = Vector2( 630, 160 )
 
 [node name="Move Node2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 480, 160 )
+position = Vector2( 200, 200 )
+
+[node name="Move Node3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 230, 200 )
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 210, 418 )
@@ -52,7 +74,7 @@ position = Vector2( 710, 160 )
 isGoal = true
 
 [node name="hide_node" parent="." instance=ExtResource( 1 )]
-position = Vector2( 270, 400 )
+position = Vector2( 480, 400 )
 
 [node name="dynamicThreat" parent="." instance=ExtResource( 8 )]
 wait_time = 30.0
@@ -61,11 +83,17 @@ autostart = true
 [node name="music scene" parent="." instance=ExtResource( 9 )]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
+[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
+[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
+[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_exited"]
+[connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 
 [editable path="Interact Node2"]
+
+[editable path="Interact Node3"]
 
 [editable path="Level Start Node"]
 

@@ -29,5 +29,6 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="Button"]
 position = Vector2( 10, 10 )
+scale = Vector2( 0.666667, 0.666667 )
 texture = ExtResource( 1 )
 [connection signal="pressed" from="Button" to="CollisionShape2D" method="_on_Button_pressed"]
