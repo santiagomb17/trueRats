@@ -19,3 +19,7 @@ func deferredSpawn():
 	endLevelNode.position = position
 
 
+
+
+func _on_Goal_Node_area_entered(area):
+	pass # Replace with function body.
