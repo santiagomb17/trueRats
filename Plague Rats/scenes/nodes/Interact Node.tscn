@@ -15,7 +15,6 @@
 script = ExtResource( 2 )
 
 [node name="Sprite" parent="Button" index="0"]
-scale = Vector2( 0.666667, 0.666667 )
 texture = ExtResource( 3 )
 [connection signal="area_entered" from="." to="CollisionShape2D" method="_on_Interact_Node_area_entered"]
 [connection signal="area_exited" from="." to="CollisionShape2D" method="_on_Interact_Node_area_exited"]
