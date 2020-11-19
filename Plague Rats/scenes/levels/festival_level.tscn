@@ -73,7 +73,6 @@ position = Vector2( 480, 400 )
 
 [node name="dynamicThreat" parent="." instance=ExtResource( 8 )]
 wait_time = 30.0
-autostart = true
 
 [node name="music scene" parent="." instance=ExtResource( 9 )]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
