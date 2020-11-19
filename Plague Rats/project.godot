@@ -16,8 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Plague Rats"
-run/main_scene="res://scenes/levels/graveyard.tscn"
+run/main_scene="res://scenes/level_select_.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://scenes/scripts/global.gd"
 
 [display]
 
