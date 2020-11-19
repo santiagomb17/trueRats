@@ -21,16 +21,16 @@ func _on_Button_pressed():
 
 
    #hides the player
-   #LAST UPDATED 11/8/2020
+   #LAST UPDATED 11/19/2020
 func _on_hide_node_area_entered(_area):
-	playerObject.isHidden = true
+	playerObject.state = playerObject.HIDDEN
 	print("Hidden")
 
 
 
    #unhides the player
-   #LAST UPDATED 11/8/2020
+   #LAST UPDATED 11/19/2020
 func _on_hide_node_area_exited(_area):
-	playerObject.isHidden = false
+	playerObject.state = playerObject.MOVING
 	print("Revealed")
 
