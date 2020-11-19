@@ -75,12 +75,12 @@ position = Vector2( 480, 400 )
 wait_time = 30.0
 
 [node name="music scene" parent="." instance=ExtResource( 9 )]
-[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
-[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_exited"]
 [connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
