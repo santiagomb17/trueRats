@@ -17,9 +17,9 @@ func _on_Button_pressed():
 	if horiz == 0 || vert == 0:
 		playerObject.global_position = pos2D.global_position
 		
-	
-	get_tree().change_scene("res://scenes/level_select_.tscn")
 	Global.level2_unlocked = true
+	get_tree().change_scene("res://scenes/level_select_.tscn")
+
 	
 
 
