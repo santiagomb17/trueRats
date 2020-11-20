@@ -22,13 +22,23 @@ func _on_Button_pressed():
 
 	
 
+<<<<<<< Updated upstream
 
+=======
+#<<<<<<< Updated upstream:Plague Rats/scripts/end_level.gd
+>>>>>>> Stashed changes
 
    #this method will handle the level transition
    #LAST UPDATED 11/8/2020
 func _on_Level_End_Node_area_entered(_area):
 	playerObject.state = playerObject.FIN
 	print("CONGLATURATIONS YOU ARE WINNAR1")
+<<<<<<< Updated upstream
 
 	print("CONGLATURATIONS YOU ARE WINNAR")
 
+=======
+#=======
+	print("CONGLATURATIONS YOU ARE WINNAR")
+#>>>>>>> Stashed changes:Plague Rats/scenes/scripts/end_level.gd
+>>>>>>> Stashed changes

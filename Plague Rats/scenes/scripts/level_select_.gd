@@ -1,4 +1,6 @@
 extends Control
+
+
 onready var G2 = Global.level2_unlocked
 onready var G3 = Global.level3_unlocked
 onready var G4 = Global.level4_unlocked
@@ -10,6 +12,10 @@ onready var G9 = Global.level9_unlocked
 onready var G10 = Global.level10_unlocked
 onready var G11 = Global.level11_unlocked
 onready var G12 = Global.level12_unlocked
+
+####examples
+###onready var temp = get_tree().get_root()
+###examples
 
 onready var button = get_node("VBoxContainer/Button")
 onready var button2 = get_node("VBoxContainer2/Button2")
@@ -25,6 +31,10 @@ onready var button11 = get_node("VBoxContainer11/Button11")
 onready var button12 = get_node("VBoxContainer12/Button12")
 
 func _ready():
+	
+	###examples
+	###levelUnlockedvar[temp.get_groups()] = true
+	####examples
 	if G2:
 		button2.set_disabled(false)
 	else:

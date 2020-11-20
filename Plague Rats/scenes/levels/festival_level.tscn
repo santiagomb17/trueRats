@@ -11,7 +11,9 @@
 [ext_resource path="res://scenes/music/music_scene.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/freq used/Camera2D.tscn" type="PackedScene" id=10]
 
-[node name="festival_level" type="Node2D"]
+[node name="festival_level" type="Node2D" groups=[
+"2",
+]]
 
 [node name="Interact Node2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 230, 320 )
@@ -75,6 +77,7 @@ position = Vector2( 480, 400 )
 wait_time = 30.0
 
 [node name="music scene" parent="." instance=ExtResource( 9 )]
+<<<<<<< Updated upstream
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
@@ -82,7 +85,18 @@ wait_time = 30.0
 [connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_exited"]
+=======
+
+[node name="music scene2" parent="." instance=ExtResource( 9 )]
+[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
+[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
+[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
+[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
+[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
+[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_entered"]
+>>>>>>> Stashed changes
 [connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_exited"]
+[connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 [connection signal="spawnEndLvl" from="Goal Node2/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 
@@ -92,8 +106,12 @@ wait_time = 30.0
 
 [editable path="Level Start Node"]
 
+[editable path="Move Node5"]
+
 [editable path="Goal Node"]
 
 [editable path="Goal Node2"]
 
 [editable path="music scene"]
+
+[editable path="music scene2"]
