@@ -8,16 +8,25 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Resource",
+"class": "SaveGame",
+"language": "GDScript",
+"path": "res://scenes/scripts/gamesave.gd"
+} ]
 _global_script_class_icons={
-
+"SaveGame": ""
 }
 
 [application]
 
 config/name="Plague Rats"
-run/main_scene="res://scenes/levels/festival_level.tscn"
+run/main_scene="res://scenes/level_select_.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://scenes/scripts/global.gd"
 
 [display]
 

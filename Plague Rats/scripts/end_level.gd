@@ -22,4 +22,5 @@ func _on_Button_pressed():
    #this method will handle the level transition
    #LAST UPDATED 11/8/2020
 func _on_Level_End_Node_area_entered(_area):
+	playerObject.state = playerObject.FIN
 	print("CONGLATURATIONS YOU ARE WINNAR1")
