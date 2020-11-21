@@ -93,6 +93,10 @@ scale = Vector2( 5, 5 )
 
 [node name="CollisionShape2D" parent="player" index="1"]
 position = Vector2( -15, -45 )
+
+[node name="winLimit" type="Timer" parent="."]
+wait_time = 40.0
+autostart = true
 [connection signal="timeout" from="timer holder/top timer" to="timer holder/top timer/top" method="_on_top_timer_timeout"]
 [connection signal="timeout" from="timer holder/top timer/top" to="." method="_on_top_timeout"]
 [connection signal="timeout" from="timer holder/right timer" to="timer holder/right timer/right" method="_on_right_timer_timeout"]
@@ -102,5 +106,6 @@ position = Vector2( -15, -45 )
 [connection signal="pressed" from="button holder/top button" to="." method="_on_top_button_pressed"]
 [connection signal="pressed" from="button holder/right button" to="." method="_on_right_button_pressed"]
 [connection signal="pressed" from="button holder/bot button" to="." method="_on_bot_buttton_pressed"]
+[connection signal="timeout" from="winLimit" to="." method="_on_winLimit_timeout"]
 
 [editable path="player"]
