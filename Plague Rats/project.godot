@@ -28,6 +28,14 @@ config/icon="res://icon.png"
 
 Global="*res://scenes/scripts/global.gd"
 
+[camera]
+
+can=false
+
+[canvas]
+
+can=false
+
 [display]
 
 window/size/height=576
@@ -37,3 +45,7 @@ window/size/test_height=576
 [rendering]
 
 environment/default_environment="res://default_env.tres"
+
+[size]
+
+can=false

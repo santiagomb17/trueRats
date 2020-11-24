@@ -1,67 +1,77 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/nodes/Level Start Node.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/freq used/Camera2D.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/freq used/Player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/nodes/Move Node.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/nodes/Interact Node.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/nodes/goal node.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/nodes/hide_node.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/freq used/endSpawn.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/freq used/timerThreat.tscn" type="PackedScene" id=9]
+[ext_resource path="res://art assets/level_background/graveyard_background.png" type="Texture" id=10]
 
 [node name="graveyard" type="Node2D"]
 
-[node name="Level Start Node" parent="." instance=ExtResource( 1 )]
-position = Vector2( 575, 300 )
+[node name="art holder" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="art holder"]
+position = Vector2( 310, 170 )
+scale = Vector2( 3.89809, 3.44 )
+texture = ExtResource( 10 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 310, 170 )
-
-[node name="player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 585, 318 )
-
-[node name="Interact Node" parent="." instance=ExtResource( 5 )]
-position = Vector2( 175, 275 )
-
-[node name="CollisionShape2D" parent="Interact Node" index="0"]
-interDist = 60.0
-hidPath = [ NodePath("../../Move Node3"), NodePath("../../Move Node6") ]
-
-[node name="Goal Node" parent="." instance=ExtResource( 6 )]
-position = Vector2( 85, 25 )
-
-[node name="CollisionShape2D" parent="Goal Node" index="0"]
-isGoal = true
-
-[node name="hide_node" parent="." instance=ExtResource( 7 )]
-position = Vector2( 300, 300 )
-
-[node name="Move Node" parent="." instance=ExtResource( 4 )]
-position = Vector2( 175, 300 )
-
-[node name="Move Node3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 300, 225 )
-
-[node name="Move Node4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 270, 25 )
-
-[node name="Move Node5" parent="." instance=ExtResource( 4 )]
-position = Vector2( 375, 25 )
-
-[node name="Move Node6" parent="." instance=ExtResource( 4 )]
-position = Vector2( 300, 90 )
-
-[node name="Move Node7" parent="." instance=ExtResource( 4 )]
-position = Vector2( 375, 90 )
 
 [node name="endSpawn" parent="." instance=ExtResource( 8 )]
 position = Vector2( 25, 300 )
 
 [node name="dynamicThreat" parent="." instance=ExtResource( 9 )]
 wait_time = 15.0
-[connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 
-[editable path="Interact Node"]
+[node name="player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 586, 318 )
 
-[editable path="Goal Node"]
+[node name="node holder" type="Node2D" parent="."]
+
+[node name="Move Node7" parent="node holder" instance=ExtResource( 4 )]
+position = Vector2( 375, 90 )
+
+[node name="Level Start Node" parent="node holder" instance=ExtResource( 1 )]
+position = Vector2( 576, 300 )
+
+[node name="Interact Node" parent="node holder" instance=ExtResource( 5 )]
+position = Vector2( 175, 275 )
+
+[node name="CollisionShape2D" parent="node holder/Interact Node" index="0"]
+interDist = 60.0
+hidPath = [ NodePath("../../Move Node3"), NodePath("../../Move Node6") ]
+
+[node name="Goal Node" parent="node holder" instance=ExtResource( 6 )]
+position = Vector2( 85, 25 )
+
+[node name="CollisionShape2D" parent="node holder/Goal Node" index="0"]
+isGoal = true
+
+[node name="hide_node" parent="node holder" instance=ExtResource( 7 )]
+position = Vector2( 300, 300 )
+
+[node name="Move Node" parent="node holder" instance=ExtResource( 4 )]
+position = Vector2( 175, 300 )
+
+[node name="Move Node3" parent="node holder" instance=ExtResource( 4 )]
+position = Vector2( 300, 225 )
+
+[node name="Move Node4" parent="node holder" instance=ExtResource( 4 )]
+position = Vector2( 270, 25 )
+
+[node name="Move Node5" parent="node holder" instance=ExtResource( 4 )]
+position = Vector2( 375, 25 )
+
+[node name="Move Node6" parent="node holder" instance=ExtResource( 4 )]
+position = Vector2( 300, 90 )
+[connection signal="spawnEndLvl" from="node holder/Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
+
+[editable path="node holder/Interact Node"]
+
+[editable path="node holder/Goal Node"]

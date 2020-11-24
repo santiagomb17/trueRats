@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/nodes/hide_node.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/freq used/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/nodes/Level Start Node.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/nodes/goal node.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/freq used/endSpawn.tscn" type="PackedScene" id=5]
@@ -11,9 +11,7 @@
 [ext_resource path="res://scenes/music/music_scene.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/freq used/Camera2D.tscn" type="PackedScene" id=10]
 
-[node name="festival_level" type="Node2D" groups=[
-"2",
-]]
+[node name="festival_level" type="Node2D"]
 
 [node name="Interact Node2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 230, 320 )
@@ -55,9 +53,6 @@ position = Vector2( 200, 200 )
 [node name="Move Node3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 230, 200 )
 
-[node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 210, 418 )
-
 [node name="Goal Node" parent="." instance=ExtResource( 4 )]
 position = Vector2( 710, 160 )
 
@@ -77,24 +72,15 @@ position = Vector2( 480, 400 )
 wait_time = 30.0
 
 [node name="music scene" parent="." instance=ExtResource( 9 )]
-<<<<<<< Updated upstream
-[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
-[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
-[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
-[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
-[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_entered"]
-[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
-[connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_exited"]
-=======
 
-[node name="music scene2" parent="." instance=ExtResource( 9 )]
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 210, 418 )
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_entered"]
->>>>>>> Stashed changes
 [connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_exited"]
 [connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
@@ -106,12 +92,8 @@ wait_time = 30.0
 
 [editable path="Level Start Node"]
 
-[editable path="Move Node5"]
-
 [editable path="Goal Node"]
 
 [editable path="Goal Node2"]
 
 [editable path="music scene"]
-
-[editable path="music scene2"]

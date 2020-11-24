@@ -66,10 +66,10 @@ __meta__ = {
 }
 
 [node name="Settings" type="Button" parent="."]
-margin_left = 401.151
-margin_top = 364.659
-margin_right = 569.151
-margin_bottom = 412.659
+margin_left = 400.0
+margin_top = 365.0
+margin_right = 568.0
+margin_bottom = 413.0
 flat = true
 __meta__ = {
 "_edit_use_anchors_": false
