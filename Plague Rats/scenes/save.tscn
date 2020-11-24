@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/savegui.gd" type="Script" id=1]
+[ext_resource path="res://scenes/GameSaver.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Button.gd" type="Script" id=3]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="." groups=[
+"save",
+]]
+margin_left = 360.0
+margin_top = 164.0
+margin_right = 696.0
+margin_bottom = 308.0
+text = "save"
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpinBox" type="SpinBox" parent="."]
+margin_left = 472.0
+margin_top = 60.0
+margin_right = 610.0
+margin_bottom = 140.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node" parent="." instance=ExtResource( 2 )]
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 352.0
+margin_top = 320.0
+margin_right = 696.0
+margin_bottom = 484.0
+text = "load"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
