@@ -9,11 +9,11 @@ var ended = false
 func _ready():
 
 	$fader.play("fade in")
-	$AudioStreamPlayer.play()
-	pass # Replace with function body.
+	#$AudioStreamPlayer.play()
+	#pass # Replace with function body.
 
 
 
 func _process(_delta):
-	if $AudioStreamPlayer.playing == false:
-		$AudioStreamPlayer.play()
+	if $music.playing == false:
+		$music.play()

@@ -6,7 +6,7 @@ func _on_Play_pressed():
 
 
 func _on_Settings_pressed():
-	get_tree().change_scene("res://scenes/Menu/PlaceHolder Menu.tscn") #link Settings page here
+	get_tree().change_scene("res://scenes/Menu/settings_screen.tscn") #link Settings page here
 
 
 func _on_Costumes_pressed():
