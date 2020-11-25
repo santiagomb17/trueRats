@@ -25,13 +25,14 @@ func _ready():
    #this method handles unhiding nodes
    #LAST UPDATED 11/8/2020
 func _on_Button_pressed():
-	   #getting horizontal distance 
-	var horiz = abs(playerObject.global_position.x - pos2D.global_position.x)
-	   #getting vertical distance 
-	var vert = abs(playerObject.global_position.y - pos2D.global_position.y)
-	   #if the player is in interDist (from editor) AND on parallel
-	if (horiz <= interDist && vert <= interDist) && (horiz == 0 || vert == 0):
-		   #show every hidden node
-		for i in hiddenNode.size():
-			hiddenNode[i].visible = true
+	if playerObject.state != playerObject.DEAD:
+		   #getting horizontal distance 
+		var horiz = abs(playerObject.global_position.x - pos2D.global_position.x)
+		   #getting vertical distance 
+		var vert = abs(playerObject.global_position.y - pos2D.global_position.y)
+		   #if the player is in interDist (from editor) AND on parallel
+		if (horiz <= interDist && vert <= interDist) && (horiz == 0 || vert == 0):
+			   #show every hidden node
+			for i in hiddenNode.size():
+				hiddenNode[i].visible = true
 
