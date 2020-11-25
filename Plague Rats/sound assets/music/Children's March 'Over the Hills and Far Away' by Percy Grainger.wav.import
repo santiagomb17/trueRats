@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Children's March 'Over the Hills and Far Away' by Percy Grainger.wav-0209888357aeb638b2c3350e29cff9f7.sample"
+
+[deps]
+
+source_file="res://sound assets/music/Children's March 'Over the Hills and Far Away' by Percy Grainger.wav"
+dest_files=[ "res://.import/Children's March 'Over the Hills and Far Away' by Percy Grainger.wav-0209888357aeb638b2c3350e29cff9f7.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

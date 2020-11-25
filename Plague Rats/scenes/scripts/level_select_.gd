@@ -127,7 +127,7 @@ func _on_Button12_pressed():
 	pass # Replace with function body.
 
 func _on_BackButton_pressed():
-	pass 
+	get_tree().change_scene("res://scenes/Menu/Main Menu.tscn")
 
 func save(save_game : Resource):
 	save_game.data["level_select_G2"] = G2

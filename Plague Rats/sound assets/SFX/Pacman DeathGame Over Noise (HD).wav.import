@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Pacman DeathGame Over Noise (HD).wav-42deec9172c2da8556b3721db32c36d3.sample"
+
+[deps]
+
+source_file="res://sound assets/SFX/Pacman DeathGame Over Noise (HD).wav"
+dest_files=[ "res://.import/Pacman DeathGame Over Noise (HD).wav-42deec9172c2da8556b3721db32c36d3.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
