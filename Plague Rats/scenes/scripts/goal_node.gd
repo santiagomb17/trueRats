@@ -4,7 +4,7 @@ export(bool) var isGoal
 export(bool) var isCheese
 
 onready var pos2D = get_node("../Position2D")         #getting position for the player to spawn at when clicked
-onready var playerObject = get_node("../../../player")   #getting the player object
+onready var playerObject = get_node("../../player")   #getting the player object
 
 signal spawnEndLvl
 

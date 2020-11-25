@@ -21,5 +21,5 @@ func deferredSpawn():
 
 
 
-func _on_Goal_Node_area_entered(area):
+func _on_Goal_Node_area_entered(_area):
 	pass # Replace with function body.

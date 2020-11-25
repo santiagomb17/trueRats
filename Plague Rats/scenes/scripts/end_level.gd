@@ -4,7 +4,7 @@ extends CollisionShape2D
 
 onready var pos2D = get_node("../Position2D")         #getting position for the player to spawn at when clicked
 onready var playerObject = get_node("../../player")   #getting the player object
-
+onready var musicFader = get_node("../../music scene/fader")
 
    #this method handles player movement
    #LAST UPDATED 11/8/2020
@@ -17,8 +17,7 @@ func _on_Button_pressed():
 	if horiz == 0 || vert == 0:
 		playerObject.global_position = pos2D.global_position
 		
-	Global.level2_unlocked = true
-	get_tree().change_scene("res://scenes/level_select_.tscn")
+	
 
 	
 
@@ -26,5 +25,10 @@ func _on_Button_pressed():
    #this method will handle the level transition
    #LAST UPDATED 11/8/2020
 func _on_Level_End_Node_area_entered(_area):
+	musicFader.play("fade out")
 	playerObject.state = playerObject.FIN
-	print("CONGLATURATIONS YOU ARE WINNAR1")
+	#print("CONGLATURATIONS YOU ARE WINNAR1")
+	Global.level2_unlocked = true
+	#######MENU STAND IN
+	get_tree().change_scene("res://scenes/level_select_.tscn")
+	#######MENU STAND IN

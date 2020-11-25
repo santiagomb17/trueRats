@@ -13,6 +13,39 @@
 
 [node name="festival_level" type="Node2D"]
 
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 210, 418 )
+
+[node name="dynamicThreat" parent="." instance=ExtResource( 8 )]
+wait_time = 30.0
+
+[node name="music scene" parent="." instance=ExtResource( 9 )]
+
+[node name="AudioStreamPlayer" parent="music scene" index="0"]
+volume_db = -60.0
+
+[node name="endSpawn" parent="." instance=ExtResource( 5 )]
+position = Vector2( 230, 110 )
+
+[node name="Camera2D" parent="." instance=ExtResource( 10 )]
+
+[node name="######NODE BARRIER####" type="Node2D" parent="."]
+
+[node name="Goal Node2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 700, 400 )
+
+[node name="CollisionShape2D" parent="Goal Node2" index="0"]
+isCheese = true
+
+[node name="Goal Node" parent="." instance=ExtResource( 4 )]
+position = Vector2( 710, 160 )
+
+[node name="CollisionShape2D" parent="Goal Node" index="0"]
+isGoal = true
+
+[node name="Level Start Node" parent="." instance=ExtResource( 3 )]
+position = Vector2( 200, 400 )
+
 [node name="Interact Node2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 230, 320 )
 
@@ -26,14 +59,6 @@ position = Vector2( 710, 130 )
 [node name="CollisionShape2D" parent="Interact Node3" index="0"]
 interDist = 55.0
 hidPath = [ NodePath("../../Move Node3") ]
-
-[node name="endSpawn" parent="." instance=ExtResource( 5 )]
-position = Vector2( 230, 110 )
-
-[node name="Camera2D" parent="." instance=ExtResource( 10 )]
-
-[node name="Level Start Node" parent="." instance=ExtResource( 3 )]
-position = Vector2( 200, 400 )
 
 [node name="top hid2" parent="." instance=ExtResource( 6 )]
 position = Vector2( 630, 320 )
@@ -53,47 +78,27 @@ position = Vector2( 200, 200 )
 [node name="Move Node3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 230, 200 )
 
-[node name="Goal Node" parent="." instance=ExtResource( 4 )]
-position = Vector2( 710, 160 )
-
-[node name="CollisionShape2D" parent="Goal Node" index="0"]
-isGoal = true
-
-[node name="Goal Node2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 700, 400 )
-
-[node name="CollisionShape2D" parent="Goal Node2" index="0"]
-isCheese = true
-
 [node name="hide_node" parent="." instance=ExtResource( 1 )]
 position = Vector2( 480, 400 )
-
-[node name="dynamicThreat" parent="." instance=ExtResource( 8 )]
-wait_time = 30.0
-
-[node name="music scene" parent="." instance=ExtResource( 9 )]
-
-[node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 210, 418 )
-[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
+[connection signal="spawnEndLvl" from="Goal Node2/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
+[connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
-[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_exited"]
 [connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_exited"]
-[connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
-[connection signal="spawnEndLvl" from="Goal Node2/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
+
+[editable path="music scene"]
+
+[editable path="Goal Node2"]
+
+[editable path="Goal Node"]
+
+[editable path="Level Start Node"]
 
 [editable path="Interact Node2"]
 
 [editable path="Interact Node3"]
-
-[editable path="Level Start Node"]
-
-[editable path="Goal Node"]
-
-[editable path="Goal Node2"]
-
-[editable path="music scene"]

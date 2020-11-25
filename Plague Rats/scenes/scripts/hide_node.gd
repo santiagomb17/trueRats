@@ -1,6 +1,6 @@
 extends CollisionShape2D
 
-onready var playerObject = get_node("../../../player")   #getting the player object
+onready var playerObject = get_node("../../player")   #getting the player object
 onready var pos2D = get_node("../Position2D")         #getting position for the player to spawn at when clicked
 
 # Called when the node enters the scene tree for the first time.

@@ -8,7 +8,7 @@ export(float) var interDist           #minimum distance the player can be from
 									  #the interact node to use it
 export(Array, NodePath) var hidPath   #array of NodePaths
 onready var hiddenNode = []           #array of Objects
-onready var playerObject = get_node("../../../player")
+onready var playerObject = get_node("../../player")
 onready var pos2D = get_node("../Position2D")
 
 
