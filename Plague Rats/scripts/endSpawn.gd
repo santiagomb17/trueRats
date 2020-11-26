@@ -1,5 +1,6 @@
 extends Position2D
 
+var level_unlocked = false;
 
 var endLvlLoader = load("res://scenes/nodes/Level End Node.tscn")
 var endLevelNode
@@ -17,9 +18,9 @@ func deferredSpawn():
 	get_node("..").add_child(endLevelNode)
 	   #set position to endSpawn object
 	endLevelNode.position = position
-
+	
 
 
 
 func _on_Goal_Node_area_entered(_area):
-	pass # Replace with function body.
+	level_unlocked = true;

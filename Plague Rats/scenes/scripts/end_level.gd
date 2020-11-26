@@ -28,7 +28,7 @@ func _on_Level_End_Node_area_entered(_area):
 	musicFader.play("fade out")
 	playerObject.state = playerObject.FIN
 	#print("CONGLATURATIONS YOU ARE WINNAR1")
-	Global.level2_unlocked = true
+	
 	#######MENU STAND IN
 	get_tree().change_scene("res://scenes/level_select_.tscn")
 	#######MENU STAND IN
