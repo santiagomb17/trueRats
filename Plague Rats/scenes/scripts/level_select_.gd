@@ -1,6 +1,16 @@
 extends Control
 
 
+#onready var levelsAvailable = [true, false, false, false, false, false, false, false, false, false, false, false]
+#	make singleton ^^^
+##
+# match group
+#	festival
+#		lvlAva[2] = true
+#	graveyard
+#		lvlAva[5] = true
+##
+
 onready var G2 = Global.level2_unlocked
 onready var G3 = Global.level3_unlocked
 onready var G4 = Global.level4_unlocked
@@ -16,6 +26,8 @@ onready var G12 = Global.level12_unlocked
 ####examples
 ###onready var temp = get_tree().get_root()
 ###examples
+
+#onready var levelButton = [get_node("VBoxContainer/Button"), get_node("VBoxContainer2/Button2")]
 
 onready var button = get_node("VBoxContainer/Button")
 onready var button2 = get_node("VBoxContainer2/Button2")
@@ -35,6 +47,10 @@ func _ready():
 	###examples
 	###levelUnlockedvar[temp.get_groups()] = true
 	####examples
+	
+#	for i in levelsAvailable:
+#		levelButton[i].set_disabled(levelsAvailable[i])
+#
 	if G2:
 		button2.set_disabled(false)
 	else:

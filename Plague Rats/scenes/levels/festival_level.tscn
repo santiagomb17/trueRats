@@ -21,9 +21,6 @@ position = Vector2( 370, 110 )
 
 [node name="music scene" parent="." instance=ExtResource( 9 )]
 
-[node name="AudioStreamPlayer" parent="music scene" index="0"]
-volume_db = -60.0
-
 [node name="endSpawn" parent="." instance=ExtResource( 5 )]
 position = Vector2( 230, 110 )
 
