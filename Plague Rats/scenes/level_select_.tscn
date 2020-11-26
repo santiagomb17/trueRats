@@ -58,9 +58,9 @@ font_data = ExtResource( 1 )
 "save",
 ]]
 anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 2.82843
-margin_bottom = 2.82843
+anchor_bottom = 1.012
+margin_top = 6.82843
+margin_bottom = -0.0836182
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false

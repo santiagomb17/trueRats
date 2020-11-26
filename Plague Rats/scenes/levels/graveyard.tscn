@@ -27,7 +27,6 @@ position = Vector2( 310, 170 )
 position = Vector2( 25, 300 )
 
 [node name="dynamicThreat" parent="." instance=ExtResource( 9 )]
-wait_time = 15.0
 
 [node name="player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 586, 318 )

@@ -1,7 +1,8 @@
 extends Control
 
 
-onready var G2 = Global.level2_unlocked
+
+onready var G2 = get_tree().get_nodes_in_group("festival level")
 onready var G3 = Global.level3_unlocked
 onready var G4 = Global.level4_unlocked
 onready var G5 = Global.level5_unlocked
@@ -12,6 +13,8 @@ onready var G9 = Global.level9_unlocked
 onready var G10 = Global.level10_unlocked
 onready var G11 = Global.level11_unlocked
 onready var G12 = Global.level12_unlocked
+
+
 
 ####examples
 ###onready var temp = get_tree().get_root()
@@ -35,7 +38,7 @@ func _ready():
 	###examples
 	###levelUnlockedvar[temp.get_groups()] = true
 	####examples
-	if G2:
+	if G2[0]:
 		button2.set_disabled(false)
 	else:
 		button2.set_disabled(true)

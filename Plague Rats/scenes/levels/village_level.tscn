@@ -9,11 +9,6 @@
 [ext_resource path="res://scenes/nodes/Interact Node.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/freq used/timerThreat.tscn" type="PackedScene" id=8]
 
-
-
-
-
-
 [node name="festival_level" type="Node2D"]
 
 [node name="Interact Node2" parent="." instance=ExtResource( 7 )]
@@ -23,7 +18,9 @@ position = Vector2( 336, 120 )
 interDist = 55.5
 hidPath = [ NodePath("../../top hid"), NodePath("../../top hid2") ]
 
-[node name="endSpawn" parent="." instance=ExtResource( 5 )]
+[node name="endSpawn" parent="." groups=[
+"festival level",
+] instance=ExtResource( 5 )]
 position = Vector2( 640, 224 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -71,10 +68,8 @@ position = Vector2( 728, 400 )
 position = Vector2( 504, 400 )
 
 [node name="dynamicThreat" parent="." instance=ExtResource( 8 )]
-wait_time = 30.0
-autostart = true
-[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
+[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
 [connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
