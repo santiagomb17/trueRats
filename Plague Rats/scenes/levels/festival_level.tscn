@@ -21,7 +21,9 @@ position = Vector2( 370, 110 )
 
 [node name="music scene" parent="." instance=ExtResource( 9 )]
 
-[node name="endSpawn" parent="." instance=ExtResource( 5 )]
+[node name="endSpawn" parent="." groups=[
+"festival_level",
+] instance=ExtResource( 5 )]
 position = Vector2( 230, 110 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 10 )]

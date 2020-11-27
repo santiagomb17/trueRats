@@ -1,6 +1,7 @@
 extends Position2D
 
-var level_unlocked = false;
+
+onready var group 
 
 var endLvlLoader = load("res://scenes/nodes/Level End Node.tscn")
 var endLevelNode
@@ -12,7 +13,14 @@ func _on_CollisionShape2D_spawnEndLvl():
 	
 
 func deferredSpawn():
-	   #instance node
+	
+	if self.is_in_group("festival_level"):
+		Global.levelsAvailable[1] = false
+	elif self.is_in_group("Yes"): 
+		pass
+	
+		
+		
 	endLevelNode = endLvlLoader.instance()
 	   #add as child of the root
 	get_node("..").add_child(endLevelNode)
@@ -23,4 +31,4 @@ func deferredSpawn():
 
 
 func _on_Goal_Node_area_entered(_area):
-	level_unlocked = true;
+	pass
