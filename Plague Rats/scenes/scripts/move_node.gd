@@ -24,6 +24,8 @@ func _on_Button_pressed():
 	#if (horiz <= 50 && vert <= 50) && (horiz == 0 || vert == 0):
 		if horiz == 0 || vert == 0:
 			#Triggers running animation. See Player script. Added 11/27/20 -Matthew
+			playerObject.startpos = playerObject.global_position
 			playerObject.nextpos = pos2D.global_position
+			
 
 

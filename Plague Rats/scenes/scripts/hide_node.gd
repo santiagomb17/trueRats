@@ -16,21 +16,24 @@ func _on_Button_pressed():
 	   #if on the same vert/hori level and not diagonal 9/21/2020
 	   #changing so you just have to be on the same x/y-axis 10/27/2020
 	if horiz == 0 || vert == 0:
-		playerObject.global_position = pos2D.global_position
+		#Triggers running animation. See Player script. Added 11/27/20 -Matthew
+		playerObject.startpos = playerObject.global_position
+		playerObject.nextpos = pos2D.global_position
+
 
 
 
    #hides the player
-   #LAST UPDATED 11/8/2020
+   #LAST UPDATED 11/19/2020
 func _on_hide_node_area_entered(_area):
-	playerObject.isHidden = true
+	playerObject.state = playerObject.HIDDEN
 	print("Hidden")
 
 
 
    #unhides the player
-   #LAST UPDATED 11/8/2020
+   #LAST UPDATED 11/19/2020
 func _on_hide_node_area_exited(_area):
-	playerObject.isHidden = false
+	playerObject.state = playerObject.MOVING
 	print("Revealed")
 

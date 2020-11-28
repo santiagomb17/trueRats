@@ -17,7 +17,8 @@ func _on_Button_pressed():
 	   #if on the same vert/hori level and not diagonal 9/21/2020
 	   #changing so you just have to be on the same x/y-axis 10/27/2020
 	if horiz == 0 || vert == 0:
-		playerObject.global_position = pos2D.global_position
+		playerObject.startpos = playerObject.global_position
+		playerObject.nextpos = pos2D.global_position
 
 
    #this method handles spawning the end level
