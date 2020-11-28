@@ -23,6 +23,7 @@ func _on_Button_pressed():
 	   #changing so you just have to be on the same x/y-axis 10/27/2020
 	#if (horiz <= 50 && vert <= 50) && (horiz == 0 || vert == 0):
 		if horiz == 0 || vert == 0:
-			playerObject.global_position = pos2D.global_position
+			#Triggers running animation. See Player script. Added 11/27/20 -Matthew
+			playerObject.nextpos = pos2D.global_position
 
 
