@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player_Run1Sombrero.png-9f0223ad48a64b6d1e5f85f73b2c9547.stex"
+path="res://.import/GoalNode.png-06e9bb47a1e65e4cde1472089915fc71.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/11-28/Player_Run1Sombrero.png"
-dest_files=[ "res://.import/Player_Run1Sombrero.png-9f0223ad48a64b6d1e5f85f73b2c9547.stex" ]
+source_file="res://art assets/11-28/GoalNode.png"
+dest_files=[ "res://.import/GoalNode.png-06e9bb47a1e65e4cde1472089915fc71.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

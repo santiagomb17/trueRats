@@ -4,7 +4,7 @@
 [ext_resource path="res://scenes/nodes/Level Start Node.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/nodes/Level End Node.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/nodes/goal node.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/freq used/Player.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=7]
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,7 +20,12 @@ position = Vector2( 468.645, 313.643 )
 [node name="Move Node" parent="." instance=ExtResource( 1 )]
 position = Vector2( 130, 480 )
 
-[node name="player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 50, 498 )
+[node name="player" parent="." instance=ExtResource( 7 )]
+position = Vector2( 50, 500 )
+
+[node name="AnimatedSprite" parent="player" index="1"]
+frame = 3
 
 [editable path="Level Start Node"]
+
+[editable path="player"]

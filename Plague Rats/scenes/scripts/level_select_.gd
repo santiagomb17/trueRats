@@ -2,39 +2,10 @@ extends Control
 
 
 
-#	make singleton ^^^
-##
-# match group
-#	festival
-#		lvlAva[2] = true
-#	graveyard
-#		lvlAva[5] = true
-##
-
-
-
-####examples
-###onready var temp = get_tree().get_root()
-###examples
 
 onready var levelAvailable = Global.levelsAvailable 
 
 onready var levelButton = [get_node("VBoxContainer/Button"), get_node("VBoxContainer2/Button2"),get_node("VBoxContainer3/Button3"),get_node("VBoxContainer4/Button4"),get_node("VBoxContainer5/Button5"),get_node("VBoxContainer6/Button9"),get_node("VBoxContainer7/Button6"),get_node("VBoxContainer8/Button7"),get_node("VBoxContainer9/Button8"),get_node("VBoxContainer10/Button10"),get_node("VBoxContainer11/Button11"),get_node("VBoxContainer12/Button12")]
-
-#onready var button = get_node("VBoxContainer/Button")
-#onready var button2 = get_node("VBoxContainer2/Button2")
-#onready var button3 = get_node("VBoxContainer3/Button3")
-#onready var button4 = get_node("VBoxContainer4/Button4")
-#onready var button5 = get_node("VBoxContainer5/Button5")
-#onready var button9 = get_node("VBoxContainer6/Button9")
-#onready var button6 = get_node("VBoxContainer7/Button6")
-#onready var button7 = get_node("VBoxContainer8/Button7")
-#onready var button8 = get_node("VBoxContainer9/Button8")
-#onready var button10 = get_node("VBoxContainer10/Button10")
-#onready var button11 = get_node("VBoxContainer11/Button11")
-#onready var button12 = get_node("VBoxContainer12/Button12")
-
-#onready var boo = levelAvailable[0]
 
 func _ready():
 	for i in range(12):
@@ -96,7 +67,7 @@ func _on_Button12_pressed():
 	pass # Replace with function body.
 
 func _on_BackButton_pressed():
-	get_tree().change_scene("res://scenes/Menu/Main Menu.tscn")
+	get_tree().change_scene("res://scenes/Play.tscn")
 
 func save(save_game : Resource):
 	save_game.data["level_select"] = levelAvailable

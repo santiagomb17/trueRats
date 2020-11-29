@@ -1,7 +1,9 @@
 extends Position2D
 
 
+
 onready var group 
+signal save_level
 
 var endLvlLoader = load("res://scenes/nodes/Level End Node.tscn")
 var endLevelNode
@@ -19,15 +21,18 @@ func deferredSpawn():
 	elif self.is_in_group("Yes"): 
 		pass
 	
+	emit_signal("save_level")
 		
 		
+	
 	endLevelNode = endLvlLoader.instance()
 	   #add as child of the root
 	get_node("..").add_child(endLevelNode)
 	   #set position to endSpawn object
 	endLevelNode.position = position
 	
-
+func save(save_game : Resource):
+	save_game.data["levels"] = Global.levelsAvailable
 
 
 func _on_Goal_Node_area_entered(_area):

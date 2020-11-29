@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player_IdleChef.png-0f6005527d00c7a86ac8c294e3a6c7f4.stex"
+path="res://.import/Player_IdleChef.png-1b0cee288a404ade7ed5192784521725.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Player/Player_IdleChef.png"
-dest_files=[ "res://.import/Player_IdleChef.png-0f6005527d00c7a86ac8c294e3a6c7f4.stex" ]
+source_file="res://art assets/11-28/Player_IdleChef.png"
+dest_files=[ "res://.import/Player_IdleChef.png-1b0cee288a404ade7ed5192784521725.stex" ]
 
 [params]
 

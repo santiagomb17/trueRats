@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayerSombrero.png-38527c7a2df07b8d2e3602986b09363c.stex"
+path="res://.import/PlayerSombrero.png-fedf3aee4f0e8aca50d120168504a8a7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Player/PlayerSombrero.png"
-dest_files=[ "res://.import/PlayerSombrero.png-38527c7a2df07b8d2e3602986b09363c.stex" ]
+source_file="res://art assets/11-28/PlayerSombrero.png"
+dest_files=[ "res://.import/PlayerSombrero.png-fedf3aee4f0e8aca50d120168504a8a7.stex" ]
 
 [params]
 
