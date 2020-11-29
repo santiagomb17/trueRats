@@ -9,7 +9,7 @@
 [node name="Node2D" type="Node2D"]
 
 [node name="Level Start Node" parent="." instance=ExtResource( 2 )]
-position = Vector2( 52, 484 )
+position = Vector2( 40, 480 )
 
 [node name="Level End Node" parent="." instance=ExtResource( 3 )]
 position = Vector2( 796, 220 )
@@ -18,7 +18,9 @@ position = Vector2( 796, 220 )
 position = Vector2( 468.645, 313.643 )
 
 [node name="Move Node" parent="." instance=ExtResource( 1 )]
-position = Vector2( 320, 480 )
+position = Vector2( 130, 480 )
 
 [node name="player" parent="." instance=ExtResource( 5 )]
-position = Vector2( 60, 500 )
+position = Vector2( 50, 498 )
+
+[editable path="Level Start Node"]
