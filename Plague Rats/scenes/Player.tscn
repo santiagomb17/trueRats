@@ -41,15 +41,15 @@ animations = [ {
 "name": "Sombrero Run",
 "speed": 12.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "Run",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": false,
 "name": "Idle",
 "speed": 0.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
 }, {
 "frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 8 ) ],
 "loop": true,
@@ -71,4 +71,5 @@ script = SubResource( 2 )
 position = Vector2( -1.14406, -6.89424 )
 frames = SubResource( 3 )
 animation = "Run"
+frame = 1
 playing = true
