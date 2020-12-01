@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/freq used/Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/nodes/Level Start Node.tscn" type="PackedScene" id=2]
@@ -7,6 +7,9 @@
 [ext_resource path="res://art assets/level10.png" type="Texture" id=5]
 [ext_resource path="res://scenes/nodes/Interact Node.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/nodes/goal node.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/music/music_scene.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/endSpawn.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/GameSaver.tscn" type="PackedScene" id=10]
 
 [node name="level 10" type="Node2D"]
 
@@ -17,8 +20,13 @@ position = Vector2( 490, 260 )
 scale = Vector2( 1.67808, 1.04294 )
 texture = ExtResource( 5 )
 
+[node name="GameSaver" parent="." instance=ExtResource( 10 )]
+
 [node name="Goal Node" parent="." instance=ExtResource( 7 )]
 position = Vector2( 740, 390 )
+
+[node name="CollisionShape2D" parent="Goal Node" index="0"]
+isGoal = true
 
 [node name="Move Node6" parent="." instance=ExtResource( 4 )]
 position = Vector2( 680, 390 )
@@ -29,6 +37,10 @@ position = Vector2( 680, 340 )
 [node name="Interact Node" parent="." instance=ExtResource( 6 )]
 position = Vector2( 650, 340 )
 
+[node name="CollisionShape2D" parent="Interact Node" index="0"]
+interDist = 120.0
+hidPath = [ NodePath("../../Move Node5"), NodePath("../../Move Node6") ]
+
 [node name="Move Node4" parent="." instance=ExtResource( 4 )]
 position = Vector2( 630, 340 )
 
@@ -36,7 +48,7 @@ position = Vector2( 630, 340 )
 position = Vector2( 210, 410 )
 
 [node name="player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 220, 427 )
+position = Vector2( 220, 428 )
 
 [node name="AnimatedSprite" parent="player" index="1"]
 position = Vector2( -8.34465e-07, -8.00001 )
@@ -51,6 +63,16 @@ position = Vector2( 520, 410 )
 
 [node name="Move Node3" parent="." instance=ExtResource( 4 )]
 position = Vector2( 330, 410 )
+
+[node name="endSpawn" parent="." instance=ExtResource( 9 )]
+position = Vector2( 740, 360 )
+
+[node name="music scene" parent="." instance=ExtResource( 8 )]
+[connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
+
+[editable path="Goal Node"]
+
+[editable path="Interact Node"]
 
 [editable path="Level Start Node"]
 
