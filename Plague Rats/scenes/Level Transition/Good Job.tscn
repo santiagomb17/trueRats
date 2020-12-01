@@ -62,19 +62,20 @@ custom_constants/separation = 20
 alignment = 1
 
 [node name="Level Select" parent="Menu/CenterRow/Buttons" instance=ExtResource( 5 )]
-margin_top = 93.0
+margin_top = 133.0
 margin_right = 769.0
-margin_bottom = 153.0
+margin_bottom = 193.0
 
 [node name="Next Level" parent="Menu/CenterRow/Buttons" instance=ExtResource( 4 )]
+visible = false
 margin_top = 173.0
 margin_right = 769.0
 margin_bottom = 233.0
 
 [node name="Try Again" parent="Menu/CenterRow/Buttons" instance=ExtResource( 3 )]
-margin_top = 253.0
+margin_top = 213.0
 margin_right = 769.0
-margin_bottom = 313.0
+margin_bottom = 273.0
 
 [node name="Fade" parent="." instance=ExtResource( 7 )]
 visible = false

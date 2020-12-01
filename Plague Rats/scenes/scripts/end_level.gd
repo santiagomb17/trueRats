@@ -28,6 +28,7 @@ func _on_Button_pressed():
 func _on_Level_End_Node_area_entered(_area):
 	musicFader.play("fade out")
 	playerObject.state = playerObject.FIN
-	
-	get_tree().change_scene("res://scenes/Level Transition/Good Job.tscn")
+	#load next scene
+	#var nextLvl = Global.lvlChange[get_node("../../endSpawn").index]
+	get_tree().change_scene(Global.lvlChange[get_node("../../endSpawn").index])
 
