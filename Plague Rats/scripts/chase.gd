@@ -1,6 +1,7 @@
 extends Node2D
 
 var rngSeed = RandomNumberGenerator.new()
+onready var game_saver : Node = $GameSaver
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -61,6 +62,6 @@ func freePress(button, timer):
 	timer.stop()
 
 func _on_winLimit_timeout():
-	
+	game_saver.save()
 	print("SUCCESSFUL CHASE")
 	get_tree().change_scene("res://scenes/level_select_.tscn")

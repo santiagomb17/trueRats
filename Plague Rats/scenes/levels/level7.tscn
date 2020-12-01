@@ -66,6 +66,7 @@ hidPath = [ NodePath("../../Move Node4"), NodePath("../../Move Node5") ]
 
 [node name="endSpawn" parent="." groups=[
 "level_7",
+"save",
 ] instance=ExtResource( 3 )]
 position = Vector2( 560, 460 )
 
