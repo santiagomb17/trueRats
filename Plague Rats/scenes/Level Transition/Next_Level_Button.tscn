@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art assets/11-23/Next Level.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Level Transition/Buttons.tscn" type="PackedScene" id=2]
+
+[node name="Next Level" instance=ExtResource( 2 )]
+margin_right = 342.0
+margin_bottom = 80.0
+flat = true
+scene_to_load = "res://scenes/levels/festival_level.tscn"
+
+[node name="Next Level" type="Sprite" parent="." index="0"]
+position = Vector2( 170, 40 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
