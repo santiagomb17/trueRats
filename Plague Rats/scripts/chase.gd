@@ -61,5 +61,6 @@ func freePress(button, timer):
 	timer.stop()
 
 func _on_winLimit_timeout():
+	
 	print("SUCCESSFUL CHASE")
 	get_tree().change_scene("res://scenes/level_select_.tscn")
