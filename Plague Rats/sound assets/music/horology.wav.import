@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/horology.wav-c52491de37f74e9e1a62f27ba0c7dc14.sample"
+
+[deps]
+
+source_file="res://sound assets/music/horology.wav"
+dest_files=[ "res://.import/horology.wav-c52491de37f74e9e1a62f27ba0c7dc14.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
