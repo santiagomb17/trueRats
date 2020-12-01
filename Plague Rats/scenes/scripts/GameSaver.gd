@@ -29,3 +29,7 @@ func load():
 	for node in get_tree().get_nodes_in_group('save'):
 		node.load(save_game)
 
+
+
+func _on_Node_ready():
+	pass # Replace with function body.
