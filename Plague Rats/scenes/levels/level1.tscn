@@ -17,6 +17,9 @@ script = ExtResource( 10 )
 
 [node name="music scene" parent="." instance=ExtResource( 9 )]
 
+[node name="music" parent="music scene" index="0"]
+stream = null
+
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="Sprite" type="Sprite" parent="Node2D"]
@@ -88,6 +91,9 @@ hidPath = [ NodePath("../../Move Node3"), NodePath("../../Move Node8") ]
 [node name="Move Node3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 430, 420 )
 [connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
+[connection signal="save_level" from="endSpawn" to="." method="_on_endSpawn_save_level"]
+
+[editable path="music scene"]
 
 [editable path="player"]
 
