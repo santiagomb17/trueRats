@@ -1,0 +1,86 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scenes/Menu/Credits.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Developers" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -3.63798e-12
+rect_scale = Vector2( 1.6738, 2.30393 )
+text = "
+    Game Development/Level Design
+	
+	          Angel Araiza
+	          Matthew Luu
+	          Melanie Martinez
+	          Santiago Montalvo-Berry
+"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sound" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 36.9994
+margin_top = 265.723
+margin_right = 36.9993
+margin_bottom = 265.723
+rect_scale = Vector2( 1.6738, 2.30393 )
+text = "
+Sound design
+
+     Santiago Montalvo-Berry
+     Inspirations from:
+          Inspiration 1
+          Inspiration 2
+          Inspiration 3"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Costume" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 459.804
+margin_top = 34.8638
+margin_right = 459.804
+margin_bottom = 34.8638
+rect_scale = Vector2( 1.6738, 2.30393 )
+text = "Costume Design
+     
+     Matthew Luu
+     Inspirations from:
+          lazertrashprinter
+          Gindew
+
+     Melanie Martinez
+     Inspirations from:
+
+     Santiago Montalvo-Berry
+     Inspirations from:"
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 858.917
+margin_top = 503.026
+margin_right = 1017.92
+margin_bottom = 566.026
+text = "Return to Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
