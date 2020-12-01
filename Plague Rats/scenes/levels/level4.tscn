@@ -38,47 +38,35 @@ position = Vector2( 586, 318 )
 
 [node name="node holder" type="Node2D" parent="."]
 
-[node name="Move Node7" parent="node holder" instance=ExtResource( 1 )]
-position = Vector2( 375, 90 )
-
-[node name="Level Start Node" parent="node holder" instance=ExtResource( 8 )]
-position = Vector2( 576, 300 )
-
-[node name="Interact Node" parent="node holder" instance=ExtResource( 9 )]
-position = Vector2( 175, 275 )
-
-[node name="CollisionShape2D" parent="node holder/Interact Node" index="0"]
-interDist = 60.0
-hidPath = [ NodePath("../../Move Node3"), NodePath("../../Move Node6") ]
-
-[node name="Goal Node" parent="node holder" instance=ExtResource( 6 )]
-position = Vector2( 85, 25 )
-
-[node name="CollisionShape2D" parent="node holder/Goal Node" index="0"]
-isGoal = true
-
-[node name="hide_node" parent="node holder" instance=ExtResource( 2 )]
-position = Vector2( 300, 300 )
-
-[node name="Move Node" parent="node holder" instance=ExtResource( 1 )]
-position = Vector2( 175, 300 )
-
-[node name="Move Node3" parent="node holder" instance=ExtResource( 1 )]
-position = Vector2( 300, 225 )
-
-[node name="Move Node4" parent="node holder" instance=ExtResource( 1 )]
-position = Vector2( 270, 25 )
-
-[node name="Move Node5" parent="node holder" instance=ExtResource( 1 )]
-position = Vector2( 372, 24 )
-
-[node name="Move Node6" parent="node holder" instance=ExtResource( 1 )]
-position = Vector2( 300, 90 )
-
 [node name="player2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 586, 318 )
-[connection signal="spawnEndLvl" from="node holder/Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 
-[editable path="node holder/Interact Node"]
+[node name="Move Node7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 375, 90 )
 
-[editable path="node holder/Goal Node"]
+[node name="Level Start Node" parent="." instance=ExtResource( 8 )]
+position = Vector2( 576, 300 )
+
+[node name="Interact Node" parent="." instance=ExtResource( 9 )]
+position = Vector2( 175, 275 )
+
+[node name="Goal Node" parent="." instance=ExtResource( 6 )]
+position = Vector2( 85, 25 )
+
+[node name="hide_node" parent="." instance=ExtResource( 2 )]
+position = Vector2( 300, 300 )
+
+[node name="Move Node" parent="." instance=ExtResource( 1 )]
+position = Vector2( 175, 300 )
+
+[node name="Move Node3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 300, 225 )
+
+[node name="Move Node4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 270, 25 )
+
+[node name="Move Node5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 372, 24 )
+
+[node name="Move Node6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 300, 90 )
