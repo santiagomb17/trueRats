@@ -29,6 +29,5 @@ func _on_Level_End_Node_area_entered(_area):
 	musicFader.play("fade out")
 	playerObject.state = playerObject.FIN
 	
-	#######MENU STAND IN
 	get_tree().change_scene("res://scenes/Level Transition/Good Job.tscn")
-	#######MENU STAND IN
+

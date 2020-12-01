@@ -24,6 +24,6 @@ func _on_dynamicThreat_timeout():
 		playerObject.state = playerObject.DEAD
 	   #placeholder for the death menu prompt
 	if playerObject.state == playerObject.DEAD:
-		print("YOU ARE DEAD")
+		get_tree().change_scene("res://scenes/Level Transition/Game Over.tscn")
 	check = !check
 
