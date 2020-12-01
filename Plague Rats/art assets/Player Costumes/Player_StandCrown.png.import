@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fat_0.png-c354f76df1ddfb8bc235f7ffb7282d8f.stex"
+path="res://.import/Player_StandCrown.png-b6fe65ce07573bcf37cd2ba2b7ce930d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Menu/fat_0.png"
-dest_files=[ "res://.import/fat_0.png-c354f76df1ddfb8bc235f7ffb7282d8f.stex" ]
+source_file="res://art assets/Player Costumes/Player_StandCrown.png"
+dest_files=[ "res://.import/Player_StandCrown.png-b6fe65ce07573bcf37cd2ba2b7ce930d.stex" ]
 
 [params]
 

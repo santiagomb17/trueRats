@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fat_0.png-c354f76df1ddfb8bc235f7ffb7282d8f.stex"
+path="res://.import/Player_Run2Crown.png-2e99bedaa748bd5312cdb4d53c0b3966.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Menu/fat_0.png"
-dest_files=[ "res://.import/fat_0.png-c354f76df1ddfb8bc235f7ffb7282d8f.stex" ]
+source_file="res://art assets/Player Costumes/Player_Run2Crown.png"
+dest_files=[ "res://.import/Player_Run2Crown.png-2e99bedaa748bd5312cdb4d53c0b3966.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2

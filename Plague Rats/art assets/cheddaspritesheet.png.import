@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fat_0.png-c354f76df1ddfb8bc235f7ffb7282d8f.stex"
+path="res://.import/cheddaspritesheet.png-5d9dc4b4bf4980e43bd93c4a8f4c96b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Menu/fat_0.png"
-dest_files=[ "res://.import/fat_0.png-c354f76df1ddfb8bc235f7ffb7282d8f.stex" ]
+source_file="res://art assets/cheddaspritesheet.png"
+dest_files=[ "res://.import/cheddaspritesheet.png-5d9dc4b4bf4980e43bd93c4a8f4c96b0.stex" ]
 
 [params]
 

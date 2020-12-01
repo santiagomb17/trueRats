@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fat_0.png-c354f76df1ddfb8bc235f7ffb7282d8f.stex"
+path="res://.import/Player_StandBubble.png-37e7b528ec1a202c3b3065a567a5f91c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Menu/fat_0.png"
-dest_files=[ "res://.import/fat_0.png-c354f76df1ddfb8bc235f7ffb7282d8f.stex" ]
+source_file="res://art assets/Player Costumes/Player_StandBubble.png"
+dest_files=[ "res://.import/Player_StandBubble.png-37e7b528ec1a202c3b3065a567a5f91c.stex" ]
 
 [params]
 

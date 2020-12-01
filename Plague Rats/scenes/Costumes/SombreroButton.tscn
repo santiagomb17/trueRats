@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art assets/11-28/Player_StandSombrero.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Costumes/CostumeButtons.tscn" type="PackedScene" id=2]
+
+[node name="CostumeButtons" instance=ExtResource( 2 )]
+
+[node name="Player_StandSombrero" type="Sprite" parent="." index="0"]
+position = Vector2( 77.315, 61.9752 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
