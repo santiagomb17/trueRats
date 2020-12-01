@@ -5,12 +5,13 @@
 [ext_resource path="res://scenes/freq used/endSpawn.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/nodes/goal node.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/GameSaver.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/levels/level7.gd" type="Script" id=6]
+[ext_resource path="res://scenes/levels/level_3.gd" type="Script" id=6]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/nodes/Interact Node.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/freq used/Camera2D.tscn" type="PackedScene" id=9]
 [ext_resource path="res://art assets/kitchen3.png" type="Texture" id=10]
 [ext_resource path="res://scenes/music/music_scene.tscn" type="PackedScene" id=11]
+
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 6 )
