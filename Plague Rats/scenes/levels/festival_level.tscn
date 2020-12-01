@@ -25,7 +25,7 @@ texture = ExtResource( 13 )
 [node name="GameSaver" parent="." instance=ExtResource( 11 )]
 
 [node name="player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 210, 418 )
+position = Vector2( 210, 416 )
 
 [node name="dynamicThreat" parent="." instance=ExtResource( 8 )]
 position = Vector2( 370, 110 )
@@ -43,7 +43,7 @@ position = Vector2( 230, 110 )
 [node name="######NODE BARRIER####" type="Node2D" parent="."]
 
 [node name="Goal Node2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 700, 400 )
+position = Vector2( 700, 398 )
 
 [node name="CollisionShape2D" parent="Goal Node2" index="0"]
 isCheese = true
@@ -55,7 +55,7 @@ position = Vector2( 710, 160 )
 isGoal = true
 
 [node name="Level Start Node" parent="." instance=ExtResource( 3 )]
-position = Vector2( 200, 400 )
+position = Vector2( 200, 398 )
 
 [node name="Interact Node2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 230, 320 )
@@ -78,19 +78,19 @@ position = Vector2( 630, 320 )
 position = Vector2( 200, 320 )
 
 [node name="Move Node6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 630, 400 )
+position = Vector2( 630, 398 )
 
 [node name="top hid" parent="." instance=ExtResource( 6 )]
 position = Vector2( 630, 160 )
 
 [node name="Move Node2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 200, 200 )
+position = Vector2( 200, 202 )
 
 [node name="Move Node3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 230, 200 )
+position = Vector2( 230, 202 )
 
 [node name="hide_node" parent="." instance=ExtResource( 1 )]
-position = Vector2( 480, 400 )
+position = Vector2( 480, 398 )
 [connection signal="ready" from="endSpawn" to="." method="_on_endSpawn_ready"]
 [connection signal="save_level" from="endSpawn" to="." method="_on_endSpawn_save_level"]
 [connection signal="spawnEndLvl" from="Goal Node2/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
