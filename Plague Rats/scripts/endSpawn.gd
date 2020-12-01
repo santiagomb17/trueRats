@@ -35,5 +35,5 @@ func save(save_game : Resource):
 	save_game.data["levels"] = Global.levelsAvailable
 
 
-func _on_Goal_Node_area_entered(_area):
-	pass
+#func _on_Goal_Node_area_entered(_area):
+#	pass

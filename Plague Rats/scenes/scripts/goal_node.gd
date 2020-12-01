@@ -20,7 +20,6 @@ func _on_Button_pressed():
 		playerObject.startpos = playerObject.global_position
 		playerObject.nextpos = pos2D.global_position
 
-
    #this method handles spawning the end level
    #LAST UPDATED 11/8/2020
 func _on_Goal_Node_area_entered(_area):

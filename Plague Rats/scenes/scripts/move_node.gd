@@ -10,7 +10,7 @@ extends CollisionShape2D
 
 onready var pos2D = get_node("../Position2D")         #getting position for the player to spawn at when clicked
 onready var playerObject = get_node("../../player")   #getting the player object
-onready var currNode = get_node("..")                 #reference to the current node
+#onready var currNode = get_node("..")                 #reference to the current node
 
    #button press handles player postion
    #LAST UPDATED 10/27/2020
