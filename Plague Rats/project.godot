@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Plague Rats"
-run/main_scene="res://scenes/level_select_.tscn"
+run/main_scene="res://scenes/Menu/Main Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
