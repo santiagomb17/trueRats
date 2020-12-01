@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://art assets/11-23/Try Again.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Level Transition/Buttons.tscn" type="PackedScene" id=2]
+
+[node name="Try Again" instance=ExtResource( 2 )]
+margin_right = 309.0
+margin_bottom = 80.0
+flat = true
+scene_to_load = "res://scenes/levels/village_level.tscn"
+
+[node name="Try Again" type="Sprite" parent="." index="0"]
+position = Vector2( 150, 40 )
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )

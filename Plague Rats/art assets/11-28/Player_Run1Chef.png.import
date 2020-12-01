@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player_Run1Chef.png-a1265121acbe9f9d1ab26688791e30f3.stex"
+path="res://.import/Player_Run1Chef.png-d3c1f6904bea4698cbe9f43996ee5358.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Player/Player_Run1Chef.png"
-dest_files=[ "res://.import/Player_Run1Chef.png-a1265121acbe9f9d1ab26688791e30f3.stex" ]
+source_file="res://art assets/11-28/Player_Run1Chef.png"
+dest_files=[ "res://.import/Player_Run1Chef.png-d3c1f6904bea4698cbe9f43996ee5358.stex" ]
 
 [params]
 

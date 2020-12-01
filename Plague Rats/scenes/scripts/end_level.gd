@@ -24,12 +24,11 @@ func _on_Button_pressed():
 
 
    #this method will handle the level transition
-   #LAST UPDATED 11/8/2020
+   #LAST UPDATED 11/20/2020 Melanie
 func _on_Level_End_Node_area_entered(_area):
 	musicFader.play("fade out")
 	playerObject.state = playerObject.FIN
-	#print("CONGLATURATIONS YOU ARE WINNAR1")
 	
 	#######MENU STAND IN
-	get_tree().change_scene("res://scenes/level_select_.tscn")
+	get_tree().change_scene("res://scenes/Level Transition/Good Job.tscn")
 	#######MENU STAND IN

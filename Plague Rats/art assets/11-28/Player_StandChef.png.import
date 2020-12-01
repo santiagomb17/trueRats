@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Player_StandChef.png-8df2fd2074288fe9e47d3d0ea34f8bd2.stex"
+path="res://.import/Player_StandChef.png-6f50ca1b62edbb978650764576f71889.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Player/Player_StandChef.png"
-dest_files=[ "res://.import/Player_StandChef.png-8df2fd2074288fe9e47d3d0ea34f8bd2.stex" ]
+source_file="res://art assets/11-28/Player_StandChef.png"
+dest_files=[ "res://.import/Player_StandChef.png-6f50ca1b62edbb978650764576f71889.stex" ]
 
 [params]
 
