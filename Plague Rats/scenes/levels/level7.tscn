@@ -157,7 +157,8 @@ interDist = 55.0
 hidPath = [ NodePath("../../Chedda 7 Hidden 3"), NodePath("../../Chedda 3 Hidden 4") ]
 
 [node name="endSpawn" parent="." groups=[
-"level_11",
+"level7",
+"save",
 ] instance=ExtResource( 5 )]
 position = Vector2( 208.789, 369.482 )
 

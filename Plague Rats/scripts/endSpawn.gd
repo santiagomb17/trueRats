@@ -16,11 +16,20 @@ func _on_CollisionShape2D_spawnEndLvl():
 
 func deferredSpawn():
 	
-	if self.is_in_group("festival_level"):
+	if self.is_in_group("level1"):
 		Global.levelsAvailable[1] = false
-	elif self.is_in_group("Yes"): 
-		pass
-	
+	elif self.is_in_group("level2"): 
+		Global.levelsAvailable[2] = false
+	elif self.is_in_group("level3"):
+		Global.levelsAvailable[3] = false
+	elif self.is_in_group("level4"): 
+		Global.levelsAvailable[4] = false
+	elif self.is_in_group("level5"):
+		Global.levelsAvailable[5] = false
+	elif self.is_in_group("level6"): 
+		Global.levelsAvailable[6] = false
+
+
 	emit_signal("save_level")
 		
 		

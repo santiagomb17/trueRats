@@ -20,35 +20,35 @@ func _ready():
 
 
 func _on_Button_pressed():
-	get_tree().change_scene("res://scenes/levels/festival_level.tscn")
+	get_tree().change_scene("res://scenes/levels/level1.tscn")
 
 func _on_Button2_pressed():
-	get_tree().change_scene("res://scenes/Base Scene.tscn")
+	get_tree().change_scene("res://scenes/levels/level2.tscn")
 
 
 
 func _on_Button3_pressed():
-	pass
+	get_tree().change_scene("res://scenes/levels/level3.tscn")
 
 
 func _on_Button4_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://scenes/levels/level4.tscn")
 
 
 func _on_Button5_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://scenes/levels/level5.tscn")
 
 
 func _on_Button9_pressed():
-	pass # Replace with function body.
+	pass
 
 
 func _on_Button6_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://scenes/levels/level6.tscn")
 
 
 func _on_Button7_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene("res://scenes/levels/level7.tscn")
 
 
 func _on_Button8_pressed():

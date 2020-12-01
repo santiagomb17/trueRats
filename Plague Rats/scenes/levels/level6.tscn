@@ -64,7 +64,10 @@ position = Vector2( 520, 410 )
 [node name="Move Node3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 330, 410 )
 
-[node name="endSpawn" parent="." instance=ExtResource( 3 )]
+[node name="endSpawn" parent="." groups=[
+"level6",
+"save",
+] instance=ExtResource( 3 )]
 position = Vector2( 740, 360 )
 
 [node name="music scene" parent="." instance=ExtResource( 4 )]
