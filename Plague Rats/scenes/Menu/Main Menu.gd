@@ -14,4 +14,4 @@ func _on_Costumes_pressed():
 
 
 func _on_Credits_pressed():
-	get_tree().change_scene("res://scenes/Menu/PlaceHolder Menu.tscn") #roll credits
+	get_tree().change_scene("res://scenes/Menu/Credits.tscn") #roll credits
