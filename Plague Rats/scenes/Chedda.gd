@@ -1,7 +1,7 @@
 extends Area2D
 
 
-onready var anim_player: AnimationPlayer = get_node("AnimatinPlayer")
+onready var anim_player: AnimationPlayer = get_node("AnimationPlayer")
 
 export var chedda_score: = 1
 

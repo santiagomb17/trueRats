@@ -34,7 +34,7 @@ texture = ExtResource( 11 )
 position = Vector2( 57.9828, 315.37 )
 
 [node name="hide_node" parent="." instance=ExtResource( 14 )]
-position = Vector2( 363.453, 418.607 )
+position = Vector2( 364, 420 )
 
 [node name="Move Node2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 80, 420 )

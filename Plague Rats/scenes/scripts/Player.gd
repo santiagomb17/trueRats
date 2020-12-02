@@ -51,8 +51,9 @@ func _process(delta):
 		runtime += .01
 		$AnimatedSprite.play(run)
 		position = startpos.linear_interpolate(nextpos,runtime/1.5)
-		if(position == nextpos):
+		if(position == nextpos || runtime >= 1.5):
 			$AnimatedSprite.play(idle)
+			position = nextpos
 			startpos = null
 			nextpos = null
 			runtime = 0
