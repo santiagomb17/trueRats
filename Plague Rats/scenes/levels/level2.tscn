@@ -14,7 +14,7 @@
 [ext_resource path="res://scenes/music/music_scene.tscn" type="PackedScene" id=12]
 [ext_resource path="res://art assets/11-30/Friend.png" type="Texture" id=13]
 [ext_resource path="res://scenes/levels/Level 4.gd" type="Script" id=14]
-[ext_resource path="res://art assets/chedda.png" type="Texture" id=15]
+[ext_resource path="res://scenes/Chedda.tscn" type="PackedScene" id=15]
 [ext_resource path="res://sound assets/music/deserted.wav" type="AudioStream" id=16]
 
 [node name="Node2D" type="Node2D"]
@@ -60,7 +60,7 @@ position = Vector2( 718.955, 340.255 )
 isGoal = true
 
 [node name="Move Node8" parent="." instance=ExtResource( 2 )]
-position = Vector2( 614.72, 224.995 )
+position = Vector2( 675.401, 224.995 )
 
 [node name="Hidden 1" parent="." instance=ExtResource( 2 )]
 position = Vector2( 432.65, 340.255 )
@@ -75,15 +75,6 @@ hidPath = [ NodePath("../../Hidden 1"), NodePath("../../Goal Node2") ]
 [node name="Hole" parent="." instance=ExtResource( 9 )]
 position = Vector2( 542.812, 224.995 )
 z_index = 3
-
-[node name="Goal Node" parent="." instance=ExtResource( 5 )]
-position = Vector2( 644.419, 224.995 )
-
-[node name="CollisionShape2D" parent="Goal Node" index="0"]
-isCheese = true
-
-[node name="Sprite" parent="Goal Node/Button" index="0"]
-texture = ExtResource( 15 )
 
 [node name="Friend" parent="." instance=ExtResource( 8 )]
 position = Vector2( 743.893, 340.255 )
@@ -120,14 +111,15 @@ texture = ExtResource( 11 )
 __meta__ = {
 "_edit_lock_": true
 }
+
+[node name="Chedda" parent="." instance=ExtResource( 15 )]
+position = Vector2( 605, 224.995 )
 [connection signal="spawnEndLvl" from="Goal Node2/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 [connection signal="save_level" from="endSpawn" to="." method="_on_endSpawn_save_level"]
 
 [editable path="Goal Node2"]
 
 [editable path="Key"]
-
-[editable path="Goal Node"]
 
 [editable path="Friend"]
 

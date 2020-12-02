@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/freq used/endSpawn.tscn" type="PackedScene" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://sound assets/music/deserted.wav" type="AudioStream" id=12]
 [ext_resource path="res://scenes/freq used/timerThreat.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/nodes/hide_node.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/Chedda.tscn" type="PackedScene" id=15]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 10 )
@@ -31,10 +32,13 @@ scale = Vector2( 0.699541, 0.741848 )
 texture = ExtResource( 11 )
 
 [node name="timer_scene" parent="." instance=ExtResource( 13 )]
-position = Vector2( 57.9828, 315.37 )
+position = Vector2( 528, 296 )
+
+[node name="Chedda" parent="." instance=ExtResource( 15 )]
+position = Vector2( 496, 488 )
 
 [node name="hide_node" parent="." instance=ExtResource( 14 )]
-position = Vector2( 363.453, 418.607 )
+position = Vector2( 364, 420 )
 
 [node name="Move Node2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 80, 420 )
