@@ -13,10 +13,10 @@
 [ext_resource path="res://scenes/levels/Level 11.gd" type="Script" id=11]
 [ext_resource path="res://scenes/GameSaver.tscn" type="PackedScene" id=12]
 [ext_resource path="res://art assets/11-30/Friend.png" type="Texture" id=13]
-[ext_resource path="res://art assets/chedda.png" type="Texture" id=14]
 [ext_resource path="res://art assets/11-30/Grid11.png" type="Texture" id=15]
 [ext_resource path="res://art assets/11-30/Cage.png" type="Texture" id=16]
 [ext_resource path="res://sound assets/music/castle.wav" type="AudioStream" id=17]
+[ext_resource path="res://scenes/Chedda.tscn" type="PackedScene" id=18]
 
 [node name="Level 11" type="Node2D"]
 script = ExtResource( 11 )
@@ -60,69 +60,25 @@ position = Vector2( 442.487, 369.482 )
 [node name="Move Node 7" parent="." instance=ExtResource( 4 )]
 position = Vector2( 256.684, 219.285 )
 
+[node name="Move Node 8" parent="." instance=ExtResource( 4 )]
+position = Vector2( 719.433, 237.285 )
+
+[node name="Move Node 9" parent="." instance=ExtResource( 4 )]
+position = Vector2( 719.433, 123.744 )
+
+[node name="Move Node 10" parent="." instance=ExtResource( 4 )]
+position = Vector2( 626.016, 123.744 )
+
 [node name="hide_node" parent="." instance=ExtResource( 8 )]
 position = Vector2( 626.016, 189.285 )
 z_index = 2
 
-[node name="Chedda 7 Hidden 3" parent="." instance=ExtResource( 6 )]
-position = Vector2( 626.016, 123.744 )
+[node name="Chedda" parent="." instance=ExtResource( 18 )]
+position = Vector2( 719.433, 302.724 )
+z_index = 8
 
-[node name="CollisionShape2D" parent="Chedda 7 Hidden 3" index="0"]
-isCheese = true
-
-[node name="Sprite" parent="Chedda 7 Hidden 3/Button" index="0"]
-texture = ExtResource( 14 )
-
-[node name="Chedda 1" parent="." instance=ExtResource( 6 )]
-position = Vector2( 719.433, 306.866 )
-
-[node name="CollisionShape2D" parent="Chedda 1" index="0"]
-isCheese = true
-
-[node name="Sprite" parent="Chedda 1/Button" index="0"]
-texture = ExtResource( 14 )
-
-[node name="Chedda 2" parent="." instance=ExtResource( 6 )]
-position = Vector2( 719.433, 260 )
-
-[node name="CollisionShape2D" parent="Chedda 2" index="0"]
-isCheese = true
-
-[node name="Sprite" parent="Chedda 2/Button" index="0"]
-texture = ExtResource( 14 )
-
-[node name="Chedda 3 Hidden 4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 719.433, 189.285 )
-
-[node name="Sprite" parent="Chedda 3 Hidden 4/Button" index="0"]
-texture = ExtResource( 14 )
-
-[node name="Chedda 4" parent="." instance=ExtResource( 6 )]
-position = Vector2( 719.433, 158.561 )
-
-[node name="CollisionShape2D" parent="Chedda 4" index="0"]
-isCheese = true
-
-[node name="Sprite" parent="Chedda 4/Button" index="0"]
-texture = ExtResource( 14 )
-
-[node name="Chedda 5" parent="." instance=ExtResource( 6 )]
-position = Vector2( 719.433, 123.744 )
-
-[node name="CollisionShape2D" parent="Chedda 5" index="0"]
-isCheese = true
-
-[node name="Sprite" parent="Chedda 5/Button" index="0"]
-texture = ExtResource( 14 )
-
-[node name="Chedda 6" parent="." instance=ExtResource( 6 )]
-position = Vector2( 676.016, 123.744 )
-
-[node name="CollisionShape2D" parent="Chedda 6" index="0"]
-isCheese = true
-
-[node name="Sprite" parent="Chedda 6/Button" index="0"]
-texture = ExtResource( 14 )
+[node name="cheddaspritesheet" parent="Chedda" index="0"]
+frame = 0
 
 [node name="Goal Node8" parent="." instance=ExtResource( 6 )]
 position = Vector2( 442.487, 123.744 )
@@ -155,7 +111,7 @@ position = Vector2( 746.536, 399.482 )
 
 [node name="CollisionShape2D" parent="Interact Node2" index="0"]
 interDist = 55.0
-hidPath = [ NodePath("../../Chedda 7 Hidden 3"), NodePath("../../Chedda 3 Hidden 4") ]
+hidPath = [ NodePath("../../Move Node 9"), NodePath("../../Move Node 10") ]
 
 [node name="endSpawn" parent="." groups=[
 "level7",
@@ -180,7 +136,7 @@ __meta__ = {
 position = Vector2( 247.951, 123.744 )
 
 [node name="music scene" parent="." instance=ExtResource( 10 )]
-position = Vector2( 208.789, 369.482 )
+position = Vector2( 208.789, 123.744 )
 
 [node name="music" parent="music scene" index="0"]
 stream = ExtResource( 17 )
@@ -190,19 +146,7 @@ volume_db = -60.0
 [connection signal="spawnEndLvl" from="Goal Node8/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 [connection signal="save_level" from="endSpawn" to="." method="_on_endSpawn_save_level"]
 
-[editable path="Chedda 7 Hidden 3"]
-
-[editable path="Chedda 1"]
-
-[editable path="Chedda 2"]
-
-[editable path="Chedda 3 Hidden 4"]
-
-[editable path="Chedda 4"]
-
-[editable path="Chedda 5"]
-
-[editable path="Chedda 6"]
+[editable path="Chedda"]
 
 [editable path="Goal Node8"]
 
@@ -211,5 +155,7 @@ volume_db = -60.0
 [editable path="Interact Node"]
 
 [editable path="Interact Node2"]
+
+[editable path="endSpawn"]
 
 [editable path="music scene"]
