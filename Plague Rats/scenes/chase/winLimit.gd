@@ -7,7 +7,7 @@ extends Timer
 
 func save(save_game : Resource):
 	if self.is_in_group("level5"):
-		Global.levelsAvailable[5] = false
+		Global.levelsAvailable[6] = false
 	elif self.is_in_group("level_3"):
 		Global.levelsAvailable[2] = false 
 		
