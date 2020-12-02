@@ -25,7 +25,7 @@ texture = ExtResource( 11 )
 position = Vector2( 310, 170 )
 
 [node name="endSpawn" parent="." groups=[
-"level4",
+"level6",
 "save",
 ] instance=ExtResource( 3 )]
 position = Vector2( 25, 300 )

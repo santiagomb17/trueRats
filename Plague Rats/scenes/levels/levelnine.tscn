@@ -29,7 +29,7 @@ texture = ExtResource( 10 )
 [node name="GameSaver" parent="." instance=ExtResource( 8 )]
 
 [node name="endSpawn" parent="." groups=[
-"level6",
+"level9",
 "save",
 ] instance=ExtResource( 3 )]
 position = Vector2( 760, 360 )
