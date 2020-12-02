@@ -94,13 +94,13 @@ position = Vector2( 336, 224 )
 [node name="Move Node3" parent="." instance=ExtResource( 1 )]
 position = Vector2( 448, 224 )
 
-[node name="hide_node" parent="." instance=ExtResource( 4 )]
-position = Vector2( 480, 398 )
-
-[node name="box" type="Sprite" parent="hide_node"]
-position = Vector2( 26.7205, -31.0355 )
+[node name="box" type="Sprite" parent="."]
+position = Vector2( 506.72, 366.965 )
 scale = Vector2( 3.18268, 3.18268 )
 texture = ExtResource( 14 )
+
+[node name="hide_node" parent="." instance=ExtResource( 4 )]
+position = Vector2( 480, 398 )
 [connection signal="ready" from="endSpawn" to="." method="_on_endSpawn_ready"]
 [connection signal="save_level" from="endSpawn" to="." method="_on_endSpawn_save_level"]
 [connection signal="spawnEndLvl" from="Goal Node2/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
