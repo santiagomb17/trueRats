@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://art assets/Player Costumes/Player_StandCrown.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Costumes/CostumeButtons.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Costumes/CrownButton.gd" type="Script" id=3]
 
 [node name="CostumeButtons" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
 
 [node name="Player_StandCrown" type="Sprite" parent="." index="0"]
 position = Vector2( 82.9273, 61.9752 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
+[connection signal="pressed" from="." to="." method="_on_CostumeButtons_pressed"]

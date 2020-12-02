@@ -1,9 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://art assets/Player Costumes/Player_StandBubble.png" type="Texture" id=1]
 [ext_resource path="res://scenes/Costumes/CostumeButtons.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Costumes/BubbleButton.gd" type="Script" id=3]
 
 [node name="CostumeButtons" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
 
 [node name="Player_StandBubble" type="Sprite" parent="." index="0"]
 position = Vector2( 80.6824, 59.7303 )
@@ -14,3 +16,4 @@ texture = ExtResource( 1 )
 margin_right = 40.0
 margin_bottom = 14.0
 text = "3 Chedda'"
+[connection signal="pressed" from="." to="." method="_on_CostumeButtons_pressed"]
