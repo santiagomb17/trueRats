@@ -10,7 +10,7 @@ func _on_Settings_pressed():
 
 
 func _on_Costumes_pressed():
-	get_tree().change_scene("res://scenes/Menu/PlaceHolder Menu.tscn") #link Costumes page here
+	get_tree().change_scene("res://scenes/Costumes/Costumes.tscn") #link Costumes page here
 
 
 func _on_Credits_pressed():

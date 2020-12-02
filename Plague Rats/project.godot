@@ -27,7 +27,6 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://scenes/scripts/global.gd"
-Score="*res://scenes/Costumes/Score.tscn"
 
 [camera]
 

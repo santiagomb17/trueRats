@@ -59,25 +59,11 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="CostumeButtons" parent="." instance=ExtResource( 5 )]
-margin_left = 173.847
-margin_top = 189.936
-margin_right = 236.847
-margin_bottom = 247.936
-flat = true
-
-[node name="CostumeButtons2" parent="." instance=ExtResource( 7 )]
-margin_left = 451.095
-margin_top = 374.02
-margin_right = 514.095
-margin_bottom = 432.02
-flat = true
-
 [node name="CostumeButtons5" parent="." instance=ExtResource( 10 )]
 margin_left = 720.0
-margin_top = 200.0
+margin_top = 192.0
 margin_right = 876.0
-margin_bottom = 323.0
+margin_bottom = 315.0
 
 [node name="CostumeButtons6" parent="." instance=ExtResource( 11 )]
 margin_left = 168.0
@@ -92,8 +78,19 @@ margin_right = 876.0
 margin_bottom = 507.0
 
 [node name="CostumeButtons3" parent="." instance=ExtResource( 6 )]
-margin_left = 440.993
-margin_top = 189.936
-margin_right = 503.993
-margin_bottom = 247.936
-flat = true
+margin_left = 456.0
+margin_top = 192.0
+margin_right = 612.0
+margin_bottom = 315.0
+
+[node name="CostumeButtons2" parent="." instance=ExtResource( 7 )]
+margin_left = 456.0
+margin_top = 384.0
+margin_right = 612.0
+margin_bottom = 507.0
+
+[node name="CostumeButtons" parent="." instance=ExtResource( 5 )]
+margin_left = 168.0
+margin_top = 192.0
+margin_right = 324.0
+margin_bottom = 315.0
