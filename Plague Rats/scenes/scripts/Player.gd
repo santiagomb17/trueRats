@@ -16,6 +16,7 @@ var run = "Run"
 func set_costume(value: int) -> void:
 	costume = value
 	emit_signal("costume_updated")
+	print("set costume")
 
 func _ready():
 	match costume:

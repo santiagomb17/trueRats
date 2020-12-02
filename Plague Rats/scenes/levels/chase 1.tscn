@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/chase/chase base.tscn" type="PackedScene" id=1]
-[ext_resource path="res://art assets/chase2 level  background.png" type="Texture" id=2]
+[ext_resource path="res://art assets/chase1 level  background.png" type="Texture" id=2]
 [ext_resource path="res://scenes/levels/chase2background.gd" type="Script" id=3]
 
 [node name="chase base" instance=ExtResource( 1 )]
