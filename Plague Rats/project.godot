@@ -16,9 +16,31 @@ _global_script_class_icons={
 [application]
 
 config/name="Plague Rats"
-run/main_scene="res://scenes/Base Scene.tscn"
+run/main_scene="res://scenes/Menu/Main Menu.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://scenes/scripts/global.gd"
+
+[camera]
+
+can=false
+
+[canvas]
+
+can=false
+
+[display]
+
+window/size/height=576
+window/size/test_width=1024
+window/size/test_height=576
 
 [rendering]
 
 environment/default_environment="res://default_env.tres"
+
+[size]
+
+can=false
