@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/Move Node.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/GameSaver.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://scenes/Chedda.tscn" type="PackedScene" id=13]
 [ext_resource path="res://art assets/Level 2/box.png" type="Texture" id=14]
 [ext_resource path="res://art assets/Level 2/Level 2 background.png" type="Texture" id=15]
+[ext_resource path="res://sound assets/music/deserted.wav" type="AudioStream" id=16]
 
 [node name="festival_level" type="Node2D"]
 script = ExtResource( 12 )
@@ -27,12 +28,16 @@ texture = ExtResource( 15 )
 [node name="GameSaver" parent="." instance=ExtResource( 2 )]
 
 [node name="player" parent="." instance=ExtResource( 11 )]
-position = Vector2( 210, 416 )
+position = Vector2( 210, 418 )
 
 [node name="dynamicThreat" parent="." instance=ExtResource( 7 )]
 position = Vector2( 370, 110 )
 
 [node name="music scene" parent="." instance=ExtResource( 3 )]
+
+[node name="music" parent="music scene" index="0"]
+stream = ExtResource( 16 )
+volume_db = -60.0
 
 [node name="endSpawn" parent="." groups=[
 "level3",
@@ -45,74 +50,74 @@ position = Vector2( 688, 224 )
 [node name="######NODE BARRIER####" type="Node2D" parent="."]
 
 [node name="Goal Node2" parent="." instance=ExtResource( 8 )]
-position = Vector2( 700, 398 )
+position = Vector2( 336, 128 )
 
 [node name="CollisionShape2D" parent="Goal Node2" index="0"]
 isCheese = true
 
 [node name="Goal Node" parent="." instance=ExtResource( 8 )]
-position = Vector2( 710, 160 )
+position = Vector2( 448, 128 )
 
 [node name="CollisionShape2D" parent="Goal Node" index="0"]
 isGoal = true
 
 [node name="Level Start Node" parent="." instance=ExtResource( 9 )]
-position = Vector2( 200, 398 )
+position = Vector2( 200, 400 )
 
 [node name="Interact Node2" parent="." instance=ExtResource( 10 )]
-position = Vector2( 384, 320 )
+position = Vector2( 656, 400 )
 
 [node name="CollisionShape2D" parent="Interact Node2" index="0"]
 interDist = 55.0
 hidPath = [ NodePath("../../top hid"), NodePath("../../top hid2") ]
 
 [node name="Interact Node3" parent="." instance=ExtResource( 10 )]
-position = Vector2( 448, 184 )
+position = Vector2( 296, 216 )
 
 [node name="CollisionShape2D" parent="Interact Node3" index="0"]
 interDist = 55.0
 hidPath = [ NodePath("../../Move Node3") ]
 
 [node name="top hid2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 630, 320 )
+position = Vector2( 336, 216 )
 
 [node name="Move Node5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 336, 320 )
+position = Vector2( 616, 312 )
 
 [node name="Move Node6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 630, 398 )
+position = Vector2( 616, 400 )
 
 [node name="top hid" parent="." instance=ExtResource( 1 )]
-position = Vector2( 592, 224 )
-
-[node name="Chedda" parent="top hid" instance=ExtResource( 13 )]
-position = Vector2( -88, 0 )
+position = Vector2( 592, 216 )
 
 [node name="Move Node2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 336, 224 )
+position = Vector2( 336, 312 )
 
 [node name="Move Node3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 448, 224 )
+position = Vector2( 448, 216 )
 
 [node name="box" type="Sprite" parent="."]
-position = Vector2( 506.72, 366.965 )
+position = Vector2( 552, 368 )
 scale = Vector2( 3.18268, 3.18268 )
 texture = ExtResource( 14 )
 
 [node name="hide_node" parent="." instance=ExtResource( 4 )]
-position = Vector2( 480, 398 )
+position = Vector2( 488, 312 )
+
+[node name="Chedda" parent="." instance=ExtResource( 13 )]
+position = Vector2( 520, 216 )
 [connection signal="ready" from="endSpawn" to="." method="_on_endSpawn_ready"]
 [connection signal="save_level" from="endSpawn" to="." method="_on_endSpawn_save_level"]
 [connection signal="spawnEndLvl" from="Goal Node2/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 [connection signal="spawnEndLvl" from="Goal Node/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
-[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
+[connection signal="area_entered" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Area2D_area_exited"]
-[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
+[connection signal="area_exited" from="Interact Node2" to="Interact Node2/CollisionShape2D" method="_on_Move_Node_area_exited"]
 [connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_entered"]
-[connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_exited"]
+[connection signal="area_entered" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_entered"]
 [connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Area2D_area_exited"]
+[connection signal="area_exited" from="Interact Node3" to="Interact Node3/CollisionShape2D" method="_on_Move_Node_area_exited"]
 
 [editable path="player"]
 
