@@ -13,89 +13,6 @@ var runtime = 0
 var idle = "Idle"
 var run = "Run"
 
-#func set_costume(value: int) -> void:
-#	costume = value
-#<<<<<<< Updated upstream
-#	emit_signal("costume_updated")
-#	print("set costume")
-
-#func _ready():
-#
-#
-#
-#>>>>>>> Stashed changes
-#	match costume:
-#		1:
-#			idle = "White Idle"
-#			run = "White Run"
-#		2:
-#			idle = "Bubble Idle"
-#			run = "Bubble Run"
-#		3:
-#			idle = "Chef Idle"
-#			run = "Chef Run"
-#		4:
-#			idle = "SombreroIdle"
-#			run = "Sombrero Run"
-#		5:
-#			idle = "Fat Idle"
-#			run = "Fat Run"
-#		6:
-#			idle = "Crown Idle"
-#			run = "Crown Run"
-#		_:
-#			idle = "Idle"
-#			run = "Run"
-
-func _ready():
-	
-	if White.ytEnabled :
-		idle = "White Idle"
-		run = "White Run"
-	elif Bubble.bubEnabled:
-		idle = "Bubble Idle"
-		run = "Bubble Run"
-	elif Chef.chefEnabled:
-		idle = "Chef Idle"
-		run = "Chef Run"
-	elif Somb.sombEnabled:
-		idle = "SombreroIdle"
-		run = "Sombrero Run"
-	elif Fat.fatEnabled:
-		idle = "Fat Idle"
-		run = "Fat Run"
-	elif !King.crownFallen:
-		idle = "Crown Idle"
-		run = "Crown Run"
-#	match costume:
-#		1:
-#			idle = "White Idle"
-#			run = "White Run"
-#		2:
-#			idle = "Bubble Idle"
-#			run = "Bubble Run"
-#		3:
-#			idle = "Chef Idle"
-#			run = "Chef Run"
-#		4:
-#			idle = "SombreroIdle"
-#			run = "Sombrero Run"
-#		5:
-#			idle = "Fat Idle"
-#			run = "Fat Run"
-#		6:
-#			idle = "Crown Idle"
-#			run = "Crown Run"
-#		_:
-#			idle = "Idle"
-#			run = "Run"
-	$AnimatedSprite.play(idle) #set the initial animation with the costume before each level.
-
-
-
-
-
-
 #Added 11/25 by Matthew
 #Used to animate the player sprite
 func _process(delta):
@@ -111,4 +28,3 @@ func _process(delta):
 			runtime = 0
 		if(state == DEAD):
 			$AnimatedSprite.play("Dead")
-
