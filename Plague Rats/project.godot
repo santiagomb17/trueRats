@@ -28,6 +28,13 @@ config/icon="res://icon.png"
 
 Global="*res://scenes/scripts/global.gd"
 Score="*res://scenes/Costumes/Score.tscn"
+Player="*res://scenes/freq used/Player.tscn"
+White="*res://scenes/Costumes/WhiteButton.tscn"
+Fat="*res://scenes/Costumes/FatButton.tscn"
+Bubble="*res://scenes/Costumes/BubbleButton.tscn"
+Chef="*res://scenes/Costumes/ChefButton.tscn"
+Somb="*res://scenes/Costumes/SombreroButton.gd"
+King="*res://scenes/Costumes/CrownButton.gd"
 
 [camera]
 

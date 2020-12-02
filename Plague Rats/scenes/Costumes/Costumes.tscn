@@ -31,7 +31,8 @@ __meta__ = {
 }
 
 [node name="player" parent="." instance=ExtResource( 8 )]
-position = Vector2( 531.912, 90.0368 )
+visible = false
+position = Vector2( 534, 90 )
 scale = Vector2( 4, 4 )
 
 [node name="Label" type="Label" parent="."]
@@ -110,3 +111,5 @@ position = Vector2( 152, 40 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 12 )
 [connection signal="pressed" from="Return" to="Return" method="_on_Return_pressed"]
+
+[editable path="CostumeButtons"]
