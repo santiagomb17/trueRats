@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/Costumes/Costumes.gd" type="Script" id=1]
 [ext_resource path="res://art assets/Menu/Costumes.png" type="Texture" id=2]
@@ -11,6 +11,8 @@
 [ext_resource path="res://scenes/Costumes/CrownButton.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/Costumes/ChefButton.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scenes/Costumes/SombreroButton.tscn" type="PackedScene" id=11]
+[ext_resource path="res://art assets/Menu/Return.png" type="Texture" id=12]
+[ext_resource path="res://scenes/Costumes/Return.gd" type="Script" id=13]
 
 [node name="Costumes" type="Control"]
 anchor_right = 1.0
@@ -44,12 +46,9 @@ __meta__ = {
 }
 
 [node name="Costumes" type="Sprite" parent="."]
-position = Vector2( 215.378, 68.71 )
-scale = Vector2( 4, 4 )
+position = Vector2( 304, 88 )
+scale = Vector2( 6, 6 )
 texture = ExtResource( 2 )
-__meta__ = {
-"_edit_lock_": true
-}
 
 [node name="chedda" type="Sprite" parent="."]
 position = Vector2( 933.754, 33.9137 )
@@ -94,3 +93,20 @@ margin_left = 168.0
 margin_top = 192.0
 margin_right = 324.0
 margin_bottom = 315.0
+
+[node name="Return" type="Button" parent="."]
+margin_left = 840.0
+margin_top = 504.0
+margin_right = 1048.0
+margin_bottom = 576.0
+flat = true
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Return" type="Sprite" parent="Return"]
+position = Vector2( 152, 40 )
+scale = Vector2( 3, 3 )
+texture = ExtResource( 12 )
+[connection signal="pressed" from="Return" to="Return" method="_on_Return_pressed"]

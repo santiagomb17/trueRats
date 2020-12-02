@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/white_1.png-619e39eed0593fb47b0a3c485713966a.stex"
+path="res://.import/Level 9 background.png-c48a6cf3ec77500e4e51a058ddb9cc9d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art assets/Menu/white_1.png"
-dest_files=[ "res://.import/white_1.png-619e39eed0593fb47b0a3c485713966a.stex" ]
+source_file="res://art assets/Level 9/Level 9 background.png"
+dest_files=[ "res://.import/Level 9 background.png-c48a6cf3ec77500e4e51a058ddb9cc9d.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=false
+flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
