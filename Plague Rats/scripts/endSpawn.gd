@@ -39,7 +39,8 @@ func deferredSpawn():
 	elif self.is_in_group("level6"): 
 		Global.levelsAvailable[6] = false
 		index = 5
-
+	elif self.is_in_group("level7"):
+		get_tree().change_scene("res://scenes/levels/level12.tscn")
 
 	emit_signal("save_level")
 		
