@@ -1,15 +1,214 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://scenes/freq used/Camera2D.tscn" type="PackedScene" id=1]
-[ext_resource path="res://art assets/ending/ending_anim.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/nodes/Level Start Node.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/freq used/Camera2D.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/nodes/Move Node.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/freq used/endSpawn.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/nodes/goal node.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/nodes/Interact Node.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/nodes/hide_node.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/freq used/timerThreat.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/music/music_scene.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/levels/Level 11.gd" type="Script" id=11]
+[ext_resource path="res://scenes/GameSaver.tscn" type="PackedScene" id=12]
+[ext_resource path="res://art assets/11-30/Friend.png" type="Texture" id=13]
+[ext_resource path="res://art assets/chedda.png" type="Texture" id=14]
+[ext_resource path="res://art assets/11-30/Grid11.png" type="Texture" id=15]
+[ext_resource path="res://art assets/11-30/Cage.png" type="Texture" id=16]
+[ext_resource path="res://sound assets/music/castle.wav" type="AudioStream" id=17]
 
-[node name="credit_scene" type="Node2D"]
+[node name="Level 11" type="Node2D"]
+script = ExtResource( 11 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 490, 260 )
-scale = Vector2( 6.12, 6.88 )
-texture = ExtResource( 2 )
+[node name="Level Start Node" parent="." instance=ExtResource( 2 )]
+position = Vector2( 262.828, 369.482 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 272.828, 387.482 )
+z_index = 1
 
-[node name="Camera2D" parent="." instance=ExtResource( 1 )]
+[node name="Camera2D" parent="." instance=ExtResource( 3 )]
+
+[node name="Move Node" parent="." instance=ExtResource( 4 )]
+position = Vector2( 343.03, 369.482 )
+
+[node name="Move Node2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 533.604, 369.482 )
+
+[node name="Hidden 1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 602.338, 369.482 )
+
+[node name="Hidden 2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 602.338, 399.482 )
+
+[node name="Move Node 3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 719.433, 399.482 )
+
+[node name="Move Node 4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 533.604, 292.724 )
+
+[node name="Move Node 5" parent="." instance=ExtResource( 4 )]
+position = Vector2( 533.604, 219.285 )
+
+[node name="Move Node 6" parent="." instance=ExtResource( 4 )]
+position = Vector2( 533.604, 189.285 )
+
+[node name="Hidden 4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 442.487, 369.482 )
+
+[node name="Move Node 7" parent="." instance=ExtResource( 4 )]
+position = Vector2( 256.684, 219.285 )
+
+[node name="hide_node" parent="." instance=ExtResource( 8 )]
+position = Vector2( 626.016, 189.285 )
+z_index = 2
+
+[node name="Chedda 7 Hidden 3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 626.016, 123.744 )
+
+[node name="CollisionShape2D" parent="Chedda 7 Hidden 3" index="0"]
+isCheese = true
+
+[node name="Sprite" parent="Chedda 7 Hidden 3/Button" index="0"]
+texture = ExtResource( 14 )
+
+[node name="Chedda 1" parent="." instance=ExtResource( 6 )]
+position = Vector2( 719.433, 306.866 )
+
+[node name="CollisionShape2D" parent="Chedda 1" index="0"]
+isCheese = true
+
+[node name="Sprite" parent="Chedda 1/Button" index="0"]
+texture = ExtResource( 14 )
+
+[node name="Chedda 2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 719.433, 260 )
+
+[node name="CollisionShape2D" parent="Chedda 2" index="0"]
+isCheese = true
+
+[node name="Sprite" parent="Chedda 2/Button" index="0"]
+texture = ExtResource( 14 )
+
+[node name="Chedda 3 Hidden 4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 719.433, 189.285 )
+
+[node name="Sprite" parent="Chedda 3 Hidden 4/Button" index="0"]
+texture = ExtResource( 14 )
+
+[node name="Chedda 4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 719.433, 158.561 )
+
+[node name="CollisionShape2D" parent="Chedda 4" index="0"]
+isCheese = true
+
+[node name="Sprite" parent="Chedda 4/Button" index="0"]
+texture = ExtResource( 14 )
+
+[node name="Chedda 5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 719.433, 123.744 )
+
+[node name="CollisionShape2D" parent="Chedda 5" index="0"]
+isCheese = true
+
+[node name="Sprite" parent="Chedda 5/Button" index="0"]
+texture = ExtResource( 14 )
+
+[node name="Chedda 6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 676.016, 123.744 )
+
+[node name="CollisionShape2D" parent="Chedda 6" index="0"]
+isCheese = true
+
+[node name="Sprite" parent="Chedda 6/Button" index="0"]
+texture = ExtResource( 14 )
+
+[node name="Goal Node8" parent="." instance=ExtResource( 6 )]
+position = Vector2( 442.487, 123.744 )
+z_index = 1
+
+[node name="CollisionShape2D" parent="Goal Node8" index="0"]
+isGoal = true
+
+[node name="Friend" parent="." instance=ExtResource( 7 )]
+position = Vector2( 442.487, 183.744 )
+
+[node name="CollisionShape2D" parent="Friend" index="0"]
+interDist = 100.0
+hidPath = [ NodePath("../../Hidden 4") ]
+
+[node name="Sprite" parent="Friend/Button" index="0"]
+position = Vector2( 13.6799, 4.98523 )
+scale = Vector2( 1.08997, 1.08997 )
+texture = ExtResource( 13 )
+
+[node name="Interact Node" parent="." instance=ExtResource( 7 )]
+position = Vector2( 227.951, 219.285 )
+
+[node name="CollisionShape2D" parent="Interact Node" index="0"]
+interDist = 55.0
+hidPath = [ NodePath("../../Hidden 1"), NodePath("../../Hidden 2") ]
+
+[node name="Interact Node2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 746.536, 399.482 )
+
+[node name="CollisionShape2D" parent="Interact Node2" index="0"]
+interDist = 55.0
+hidPath = [ NodePath("../../Chedda 7 Hidden 3"), NodePath("../../Chedda 3 Hidden 4") ]
+
+[node name="endSpawn" parent="." groups=[
+"level_11",
+] instance=ExtResource( 5 )]
+position = Vector2( 208.789, 369.482 )
+
+[node name="Cage" type="Sprite" parent="."]
+position = Vector2( 452.487, 176.561 )
+texture = ExtResource( 16 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 489.57, 258.729 )
+scale = Vector2( 1.22924, 1.39555 )
+z_index = -3
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="timer_scene" parent="." instance=ExtResource( 9 )]
+position = Vector2( 247.951, 123.744 )
+
+[node name="music scene" parent="." instance=ExtResource( 10 )]
+position = Vector2( 208.789, 369.482 )
+
+[node name="music" parent="music scene" index="0"]
+stream = ExtResource( 17 )
+volume_db = -60.0
+
+[node name="GameSaver" parent="." instance=ExtResource( 12 )]
+[connection signal="spawnEndLvl" from="Goal Node8/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
+[connection signal="save_level" from="endSpawn" to="." method="_on_endSpawn_save_level"]
+
+[editable path="Chedda 7 Hidden 3"]
+
+[editable path="Chedda 1"]
+
+[editable path="Chedda 2"]
+
+[editable path="Chedda 3 Hidden 4"]
+
+[editable path="Chedda 4"]
+
+[editable path="Chedda 5"]
+
+[editable path="Chedda 6"]
+
+[editable path="Goal Node8"]
+
+[editable path="Friend"]
+
+[editable path="Interact Node"]
+
+[editable path="Interact Node2"]
+
+[editable path="music scene"]
