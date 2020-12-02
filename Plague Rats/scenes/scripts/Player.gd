@@ -9,7 +9,7 @@ var nextpos = null
 var startpos = null
 var runtime = 0
 
-var costume = 0 setget set_costume
+#var costume = 0 setget set_costume
 var idle = "Idle"
 var run = "Run"
 

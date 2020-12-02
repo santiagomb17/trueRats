@@ -1,15 +1,26 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/freq used/Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://art assets/ending/ending_anim.png" type="Texture" id=2]
 [ext_resource path="res://art assets/ending/background.png" type="Texture" id=3]
-
-[sub_resource type="Animation" id=2]
-resource_name = "art_fade"
-length = 3.5
+[ext_resource path="res://scenes/scripts/cut_scene.gd" type="Script" id=4]
 
 [sub_resource type="Animation" id=1]
-resource_name = "flag"
+resource_name = "art_fade"
+length = 3.5
+tracks/0/type = "method"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
+
+[sub_resource type="Animation" id=2]
 length = 5.0
 tracks/0/type = "value"
 tracks/0/path = NodePath("flag:frame")
@@ -23,6 +34,17 @@ tracks/0/keys = {
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
 }
+tracks/1/type = "method"
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
 
 [sub_resource type="Animation" id=3]
 resource_name = "prog_fade"
@@ -33,6 +55,7 @@ resource_name = "sound_fade"
 length = 3.5
 
 [node name="credit_scene" type="Node2D"]
+script = ExtResource( 4 )
 
 [node name="bg" type="Sprite" parent="."]
 position = Vector2( 490, 260 )
@@ -45,39 +68,50 @@ scale = Vector2( 12.2756, 13.8 )
 texture = ExtResource( 2 )
 vframes = 2
 hframes = 5
+frame = 9
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/art_fade = SubResource( 2 )
-anims/flag = SubResource( 1 )
+anims/art_fade = SubResource( 1 )
+anims/flag = SubResource( 2 )
 anims/prog_fade = SubResource( 3 )
 anims/sound_fade = SubResource( 4 )
 
 [node name="Camera2D" parent="." instance=ExtResource( 1 )]
 
 [node name="prog" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 520.0
+margin_top = 138.0
+margin_right = 560.0
+margin_bottom = 152.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="art" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 520.0
+margin_top = 138.0
+margin_right = 560.0
+margin_bottom = 152.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="sound" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
+margin_left = 520.0
+margin_top = 138.0
+margin_right = 560.0
+margin_bottom = 152.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="return" type="Button" parent="."]
-margin_right = 12.0
-margin_bottom = 20.0
+visible = false
+margin_left = 418.0
+margin_top = 360.0
+margin_right = 564.0
+margin_bottom = 382.0
+text = "Return to Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }

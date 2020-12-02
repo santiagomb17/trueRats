@@ -50,36 +50,6 @@ func _ready():
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 16 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "Crown Run",
-"speed": 12.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "Fat Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "Dead",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "Sombrero Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": false,
-"name": "Idle",
-"speed": 0.0
-}, {
-"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ) ],
-"loop": true,
-"name": "Run",
-"speed": 12.0
-}, {
 "frames": [ ExtResource( 23 ), ExtResource( 25 ), ExtResource( 24 ), ExtResource( 23 ) ],
 "loop": true,
 "name": "White Run",
@@ -110,6 +80,31 @@ animations = [ {
 "name": "Chef Run",
 "speed": 12.0
 }, {
+"frames": [ ExtResource( 5 ) ],
+"loop": false,
+"name": "Idle",
+"speed": 0.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "Fat Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "Dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "Sombrero Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Run",
+"speed": 12.0
+}, {
 "frames": [ ExtResource( 23 ) ],
 "loop": true,
 "name": "White Idle",
@@ -118,6 +113,11 @@ animations = [ {
 "frames": [ ExtResource( 15 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "Bubble Run",
+"speed": 12.0
+}, {
+"frames": [ ExtResource( 16 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Crown Run",
 "speed": 12.0
 } ]
 
@@ -135,3 +135,4 @@ script = SubResource( 2 )
 position = Vector2( -1.26204, -6.89424 )
 frames = SubResource( 3 )
 animation = "Fat Idle"
+playing = true
