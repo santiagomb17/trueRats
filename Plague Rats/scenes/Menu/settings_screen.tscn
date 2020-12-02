@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/freq used/Camera2D.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/scripts/settings_screen.gd" type="Script" id=2]
 [ext_resource path="res://scenes/music/music_scene.tscn" type="PackedScene" id=3]
 [ext_resource path="res://sound assets/SFX/Pacman DeathGame Over Noise (HD).wav" type="AudioStream" id=4]
+[ext_resource path="res://art assets/Background gradient.png" type="Texture" id=5]
 
 [node name="settings_screen" type="Node2D"]
 script = ExtResource( 2 )
@@ -68,6 +69,12 @@ text = "Return to Main Menu"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 330.576, 178.186 )
+scale = Vector2( 1.91028, 1.78957 )
+z_index = -1
+texture = ExtResource( 5 )
 [connection signal="value_changed" from="SFX_slider" to="." method="_on_SFX_slider_value_changed"]
 [connection signal="value_changed" from="music_slider" to="." method="_on_music_slider_value_changed"]
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

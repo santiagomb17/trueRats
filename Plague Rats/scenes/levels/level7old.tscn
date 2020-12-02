@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/nodes/Level Start Node.tscn" type="PackedScene" id=2]
@@ -16,7 +16,6 @@
 [ext_resource path="res://art assets/chedda.png" type="Texture" id=14]
 [ext_resource path="res://art assets/11-30/Grid11.png" type="Texture" id=15]
 [ext_resource path="res://art assets/11-30/Cage.png" type="Texture" id=16]
-[ext_resource path="res://sound assets/music/castle.wav" type="AudioStream" id=17]
 
 [node name="Level 11" type="Node2D"]
 script = ExtResource( 11 )
@@ -182,10 +181,6 @@ position = Vector2( 247.951, 123.744 )
 [node name="music scene" parent="." instance=ExtResource( 10 )]
 position = Vector2( 208.789, 369.482 )
 
-[node name="music" parent="music scene" index="0"]
-stream = ExtResource( 17 )
-volume_db = -60.0
-
 [node name="GameSaver" parent="." instance=ExtResource( 12 )]
 [connection signal="spawnEndLvl" from="Goal Node8/CollisionShape2D" to="endSpawn" method="_on_CollisionShape2D_spawnEndLvl"]
 [connection signal="save_level" from="endSpawn" to="." method="_on_endSpawn_save_level"]
@@ -211,5 +206,3 @@ volume_db = -60.0
 [editable path="Interact Node"]
 
 [editable path="Interact Node2"]
-
-[editable path="music scene"]

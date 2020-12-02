@@ -1,6 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://art assets/OpenSans-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://art assets/Background gradient.png" type="Texture" id=2]
 [ext_resource path="res://scenes/scripts/level_select_.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -65,6 +66,13 @@ script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+position = Vector2( 512, 286 )
+scale = Vector2( 3.175, 2.9375 )
+texture = ExtResource( 2 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 40.0
